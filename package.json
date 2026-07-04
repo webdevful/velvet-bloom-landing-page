@@ -1,5 +1,5 @@
 {
-  "name": "repo",
+  "name": "velvet-bloom",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -8,10 +8,12 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "design:lint": "designmd lint DESIGN.md",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
+    "@google/design.md": "^0.3.0",
     "astro": "^7.0.3"
   }
 }
