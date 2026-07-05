@@ -1,56 +1,70 @@
-# Velvet Bloom Design Contract
-
-Webdevful-owned beauty-salon & day-spa landing page. Source/inspiration only —
-all final copy, brand marks, and media must be Webdevful-owned or
-approved/licensed/open-source. Do not ship the Magnolia template name, copy, or
-mirrored vendor markup.
+---
+designmd: 0.3.0
+name: Velvet Bloom
+slug: velvet-bloom
+status: live
+type: landing-page
+---
 
 ## Source Baseline
 
 - Source URL: `https://magnolia-template.webflow.io/`
 - Source/inspiration label: Magnolia (Webflow hosted template)
-- Capture: `/Volumes/WDF-NAS-01/04-Projects/Internal-Projects/Codebases/webdevful-astro-main/captures/magnolia-template-webflow-io/desktop/screenshot-fullpage.png`
-- Source intake manifest: `/Volumes/WDF-NAS-01/04-Projects/Internal-Projects/Codebases/webdevful-astro-main/captures/magnolia-template-webflow-io/source-intake/SOURCE-INTAKE-MANIFEST.md`
-- Rebuild guide: `/Volumes/WDF-NAS-01/04-Projects/Internal-Projects/Codebases/webdevful-astro-main/captures/magnolia-template-webflow-io/desktop/REBUILD-GUIDE.md`
-- Structure (from capture): sticky nav with dropdowns + booking CTA, hero with
-  booking CTA, four-service overview, care-standards band (safety / expertise /
-  comfort), expandable pricing menu, salon photo gallery, five-star testimonials,
-  contact form, and location/contact footer.
-- Runtime: confirm the source's scroll behavior (including any
-  `background-attachment` parallax) and reproduce it — do not substitute a
-  decorative effect for a missing source background.
+- Primary category: beauty-spas
+- Secondary categories: salons-barbers
 
 ## Tokens
-
-> Build worker: replace these starter values with tokens read from the source
-> capture before first build. Keep the elegant, sophisticated beauty-salon feel.
 
 ```json
 {
   "color": {
-    "ink": "#221b1d",
-    "paper": "#fbf6f3",
+    "ink": "#000000",
+    "paper": "#fdfaf7",
     "white": "#ffffff",
+    "warmBeige": "#f8e8da",
+    "peach": "#f8c497",
+    "accentHover": "#f4d2b5",
+    "dark": "#1f2024",
     "muted": "#7a6d6f",
-    "line": "#ece0dc",
-    "accent": "#b8867a",
-    "accentDark": "#8f5f55"
+    "line": "#ece0dc"
   },
   "typography": {
-    "heading": "TBD-from-source",
-    "body": "TBD-from-source"
+    "heading": "Forum, serif",
+    "body": "Cormorant, serif",
+    "accent": "Open Sans, sans-serif",
+    "heroSize": "clamp(44px, 6vw, 96px)",
+    "h2Size": "clamp(28px, 3vw, 36px)",
+    "bodySize": "16px",
+    "bodyLineHeight": "1.5"
+  },
+  "spacing": {
+    "sectionPadding": "80px",
+    "containerMax": "1200px",
+    "containerPad": "24px"
   }
 }
 ```
 
-## Visual Slot Contract
+## Structure
 
-Classify every source visual slot through `docs/VISUAL-ASSET-CATALOG.md` and
-preserve each family with approved owned/licensed/open-source media. Beauty-salon
-photography slots (hero, gallery, service cards, testimonials) must use approved
-licensed/open-source imagery, not flattened stills or dead embeds.
+1. Popup booking modal (overlay)
+2. Transparent fixed navbar with logo, nav links (Services, Standards, Pricing, Gallery), Contact CTA
+3. Hero: split layout (heading left, image right, subtitle + CTA below heading)
+4. Services: 4-card grid (Cosmetology, Massage, Nails, Makeup) with image + description; mobile Swiper slider
+5. Standards of care: 3-icon cards (Safety, Expertise, Comfort) with decorative ellipses
+6. Pricing: split layout (image left, accordion dropdown pricing menus right)
+7. Gallery: 5-image masonry grid with lightbox
+8. Reviews: 3 testimonial cards with star ratings on warm background
+9. Contact form: phone number form with decor images
+10. Footer: logo, address/email/phone, social links, footer menu, bottom CTA band
+11. Powered by WebDevful signature
 
-## Category
+## Interactions
 
-- Primary: `beauty-spas` (Beauty, Spas & Personal Care)
-- Secondary: `salons-barbers`
+- Sticky navbar with scroll-triggered white background
+- Mobile hamburger menu with overlay
+- Pricing accordion dropdowns (single open at a time)
+- Gallery lightbox overlay
+- Booking popup modal via `data-open-popup` triggers
+- Services Swiper slider on mobile (1 slide, loop, nav arrows + pagination)
+- Smooth scroll for anchor links

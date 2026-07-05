@@ -1,0 +1,67 @@
+{
+  "slug": "velvet-bloom",
+  "sourceUrl": "https://magnolia-template.webflow.io/",
+  "sourceLabel": "Magnolia (Webflow hosted template)",
+  "design_tokens": {
+    "fonts": {
+      "heading": "Forum, serif",
+      "body": "Cormorant, serif",
+      "accent": "Open Sans, sans-serif"
+    },
+    "colors": {
+      "paper": "#fdfaf7",
+      "ink": "#000000",
+      "warmBeige": "#f8e8da",
+      "peach": "#f8c497",
+      "white": "#ffffff",
+      "dark": "#1f2024",
+      "line": "#ece0dc"
+    }
+  },
+  "sections": [
+    "booking-popup-modal",
+    "navbar-fixed-transparent",
+    "hero-split-layout",
+    "services-4-card-grid",
+    "standards-3-icon-cards",
+    "pricing-accordion-dropdowns",
+    "gallery-5-image-masonry",
+    "reviews-3-testimonials",
+    "contact-phone-form",
+    "footer-logo-info-social-menu"
+  ],
+  "visual_slots": {
+    "hero": { "family": "photography", "count": 1, "aspect": "670x589" },
+    "services": { "family": "photography", "count": 4, "aspect": "405x455" },
+    "pricing": { "family": "photography", "count": 1, "aspect": "547x814" },
+    "gallery": { "family": "photography", "count": 5, "aspect": "mixed" },
+    "form_decor": { "family": "photography", "count": 1, "aspect": "square" },
+    "popup": { "family": "photography", "count": 1, "aspect": "square" },
+    "standards_icons": { "family": "svg-icon", "count": 3 },
+    "social_icons": { "family": "svg-icon", "count": 3 }
+  },
+  "typography_scale": {
+    "h1": "96px desktop / 48px tablet",
+    "h2": "36px desktop / 32px tablet",
+    "body": "16px",
+    "hero_subhead": "24px",
+    "service_heading": "24px",
+    "pricing_dropdown": "24px",
+    "review_name": "20px",
+    "footer_cta": "24px"
+  },
+  "interactions": [
+    "sticky-navbar-scroll-bg",
+    "mobile-hamburger-overlay",
+    "pricing-accordion-single-open",
+    "gallery-lightbox-overlay",
+    "booking-popup-modal",
+    "services-swiper-mobile-slider",
+    "smooth-scroll-anchors"
+  ],
+  "footer_requirements": {
+    "businessBranding": true,
+    "copyrightAndLegal": true,
+    "poweredByWebdevful": true
+  }
+}

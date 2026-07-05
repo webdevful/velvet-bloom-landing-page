@@ -1,17 +1,507 @@
 ---
+import "../styles/velvet-bloom.css";
 
+// Unsplash photo replacements for source imagery
+const heroImg = "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=670&h=589&fit=crop";
+const cosmetologyImg = "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=405&h=457&fit=crop";
+const massageImg = "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=406&h=458&fit=crop";
+const nailsImg = "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=405&h=452&fit=crop";
+const makeupImg = "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=405&h=454&fit=crop";
+const pricingImg = "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=547&h=814&fit=crop";
+const gallery1 = "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1382&h=903&fit=crop";
+const gallery2 = "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&h=600&fit=crop";
+const gallery3 = "https://images.unsplash.com/photo-1634302082593-5c4a7e1235bb?w=1382&h=1183&fit=crop";
+const gallery4 = "https://images.unsplash.com/photo-1591637333184-19d84b3c59b1?w=600&h=600&fit=crop";
+const gallery5 = "https://images.unsplash.com/photo-1600948836101-f9ff8e7e2b9c?w=600&h=600&fit=crop";
+const formImg = "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&h=400&fit=crop";
+const popupImg = "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&h=600&fit=crop";
+const heroBgImg = "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=670&h=589&fit=crop";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Velvet Bloom | Beauty Salon & Day Spa</title>
+    <meta name="description" content="Velvet Bloom — a beauty salon and day spa where you can feel renewed and beautiful. Book your visit today." />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="Home">
+      <div class="container">
+        <a href="/" class="navbar-logo">
+          <img src="/logo.png" alt="Velvet Bloom" width="156" height="40" />
+        </a>
+        <div class="navbar-menu">
+          <div class="navbar-links-wrapp">
+            <div class="header-links-wrapp">
+              <a href="#Services" class="header-nav-link">Services</a>
+              <a href="#Standards" class="header-nav-link">Standards</a>
+              <a href="#Pricing" class="header-nav-link">Pricing</a>
+              <a href="#Gallery" class="header-nav-link">Gallery</a>
+            </div>
+            <a href="#" data-open-popup class="button small-button button-mob">Contact us</a>
+          </div>
+        </div>
+        <a href="#" data-open-popup class="button small-button button-desk">Contact us</a>
+        <div class="nav-button">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Cpath d='M4 7h20v2H4zm0 6h20v2H4zm0 6h20v2H4z'/%3E%3C/svg%3E" alt="Menu" class="menu-icon-open" width="28" height="28" />
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18 6L6 18M6 6l12 12' stroke='%23000' stroke-width='2'/%3E%3C/svg%3E" alt="Close" class="menu-icon-close" width="28" height="28" />
+        </div>
+      </div>
+    </nav>
+    <div class="nav-overlay"></div>
+
+    <main>
+      <!-- Hero -->
+      <section class="section hero-section">
+        <div class="container">
+          <div class="hero-block-wrapp">
+            <div class="hero-block-left">
+              <h1>Feel <span class="italic">renewed</span> and <span class="italic">beautiful</span> with Velvet Bloom</h1>
+            </div>
+            <div class="hero-block-right">
+              <img src={heroBgImg} alt="Beauty salon" class="hero-block-image" width="670" height="589" loading="eager" />
+            </div>
+            <div class="hero-subhead">
+              <p>Our salon aims to give you pleasure, relaxation, care, and improvement.</p>
+            </div>
+            <div class="hero-block-button">
+              <a href="#" data-open-popup class="button">
+                Book a visit
+                <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 1l5 5m0 0l-5 5m5-5H1" stroke="currentColor" stroke-width="1.5"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="Services" class="section big-top-margin">
+        <div class="container">
+          <h2>Our services</h2>
+          <div class="services-grid">
+            <div class="service-item">
+              <div class="services-item">
+                <div class="services-item-left">
+                  <div class="services-item-head">Cosmetology</div>
+                  <p class="service-item-description">Professional cosmetology treatments designed to rejuvenate and refresh your skin. From deep cleansing to advanced peels, we tailor every procedure to your unique needs.</p>
+                  <div class="services-link">
+                    <svg width="25" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 1l5 5m0 0l-5 5m5-5H1" stroke="currentColor" stroke-width="1.5"/></svg>
+                  </div>
+                </div>
+                <div class="services-item-right">
+                  <img src={cosmetologyImg} alt="Cosmetology" width="200" height="220" loading="lazy" />
+                </div>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="services-item">
+                <div class="services-item-left">
+                  <div class="services-item-head">Massage</div>
+                  <p class="service-item-description">Relax and unwind with our therapeutic massage treatments. Our skilled therapists use techniques that release tension and restore your body's natural balance.</p>
+                  <div class="services-link">
+                    <svg width="25" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 1l5 5m0 0l-5 5m5-5H1" stroke="currentColor" stroke-width="1.5"/></svg>
+                  </div>
+                </div>
+                <div class="services-item-right">
+                  <img src={massageImg} alt="Massage" width="200" height="220" loading="lazy" />
+                </div>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="services-item">
+                <div class="services-item-left">
+                  <div class="services-item-head">Nails service</div>
+                  <p class="service-item-description">Discover exceptional nail care with our manicure and pedicure services. We use premium products to deliver beautiful, lasting results every time.</p>
+                  <div class="services-link">
+                    <svg width="25" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 1l5 5m0 0l-5 5m5-5H1" stroke="currentColor" stroke-width="1.5"/></svg>
+                  </div>
+                </div>
+                <div class="services-item-right">
+                  <img src={nailsImg} alt="Nail service" width="200" height="220" loading="lazy" />
+                </div>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="services-item">
+                <div class="services-item-left">
+                  <div class="services-item-head">Makeup</div>
+                  <p class="service-item-description">Enhance your natural beauty with our professional makeup services. Whether for a special occasion or everyday glamour, our artists create the perfect look for you.</p>
+                  <div class="services-link">
+                    <svg width="25" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 1l5 5m0 0l-5 5m5-5H1" stroke="currentColor" stroke-width="1.5"/></svg>
+                  </div>
+                </div>
+                <div class="services-item-right">
+                  <img src={makeupImg} alt="Makeup" width="200" height="220" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile slider -->
+          <div class="services-slider swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="services-item">
+                  <div class="services-item-left">
+                    <div class="services-item-head">Cosmetology</div>
+                    <p class="service-item-description">Professional cosmetology treatments designed to rejuvenate and refresh your skin.</p>
+                    <div class="services-link">
+                      <svg width="25" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 1l5 5m0 0l-5 5m5-5H1" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </div>
+                  </div>
+                  <div class="services-item-right">
+                    <img src={cosmetologyImg} alt="Cosmetology" loading="lazy" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="services-item">
+                  <div class="services-item-left">
+                    <div class="services-item-head">Massage</div>
+                    <p class="service-item-description">Therapeutic massage treatments that release tension and restore your body's natural balance.</p>
+                    <div class="services-link">
+                      <svg width="25" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 1l5 5m0 0l-5 5m5-5H1" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </div>
+                  </div>
+                  <div class="services-item-right">
+                    <img src={massageImg} alt="Massage" loading="lazy" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="services-item">
+                  <div class="services-item-left">
+                    <div class="services-item-head">Nails service</div>
+                    <p class="service-item-description">Exceptional nail care with premium products for beautiful, lasting results.</p>
+                    <div class="services-link">
+                      <svg width="25" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 1l5 5m0 0l-5 5m5-5H1" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </div>
+                  </div>
+                  <div class="services-item-right">
+                    <img src={nailsImg} alt="Nail service" loading="lazy" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="services-item">
+                  <div class="services-item-left">
+                    <div class="services-item-head">Makeup</div>
+                    <p class="service-item-description">Professional makeup services for any occasion — from natural to glamorous.</p>
+                    <div class="services-link">
+                      <svg width="25" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 1l5 5m0 0l-5 5m5-5H1" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </div>
+                  </div>
+                  <div class="services-item-right">
+                    <img src={makeupImg} alt="Makeup" loading="lazy" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Standards of Care -->
+      <section id="Standards" class="section">
+        <div class="container">
+          <h2>Standards of care</h2>
+          <div class="standarts-wrapp">
+            <div class="standart-item">
+              <div class="standart-image-wrapp">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 4L6 14v20l18 10 18-10V14zm0 4l14 8v16l-14 8-14-8V16zm-2 8h4v12h-4zm0 14h4v4h-4z' fill='%23000'/%3E%3C/svg%3E" alt="Safety" class="standart-icon" />
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='212' height='225' viewBox='0 0 212 225'%3E%3Ccircle cx='106' cy='112.5' r='100' fill='%23f8e8da' opacity='0.6'/%3E%3C/svg%3E" alt="" class="service-image-absolute" />
+              </div>
+              <p class="service-text">First of all, we care about your health and safety, therefore we adhere to all rules for cleaning instruments.</p>
+            </div>
+            <div class="standart-item">
+              <div class="standart-image-wrapp">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 4C14.06 4 6 12.06 6 22s8.06 18 18 18 18-8.06 18-18S33.94 4 24 4zm0 32c-7.73 0-14-6.27-14-14S16.27 8 24 8s14 6.27 14 14-6.27 14-14 14zm-2-22h4v12h-4zm0 14h4v4h-4z' fill='%23000'/%3E%3C/svg%3E" alt="Expertise" class="standart-icon" />
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='212' height='225' viewBox='0 0 212 225'%3E%3Ccircle cx='106' cy='112.5' r='100' fill='%23f8e8da' opacity='0.6'/%3E%3C/svg%3E" alt="" class="service-image-absolute" />
+              </div>
+              <p class="service-text">We only employ certified, highly qualified experts because the perfect result is a priority.</p>
+            </div>
+            <div class="standart-item">
+              <div class="standart-image-wrapp">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 6C14.06 6 6 14.06 6 24s8.06 18 18 18 18-8.06 18-18S33.94 6 24 6zm0 32c-7.73 0-14-6.27-14-14S16.27 10 24 10s14 6.27 14 14-6.27 14-14 14zm-2-18h4v12h-4zm0-8h4v4h-4z' fill='%23000'/%3E%3C/svg%3E" alt="Comfort" class="standart-icon" />
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='212' height='225' viewBox='0 0 212 225'%3E%3Ccircle cx='106' cy='112.5' r='100' fill='%23f8e8da' opacity='0.6'/%3E%3C/svg%3E" alt="" class="service-image-absolute" />
+              </div>
+              <p class="service-text">We always create an atmosphere of coziness and comfort — in our space, you will relax both body and soul.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section class="section">
+        <div class="container">
+          <div class="pricing-wrapp">
+            <div class="pricng-images-wrapp">
+              <img src={pricingImg} alt="Beauty treatments" class="pricing-main-image" loading="lazy" />
+            </div>
+            <div class="pricing-table">
+              <div id="Pricing" class="pricing-head">
+                <h2 class="align-left">Types of procedures &amp; pricing</h2>
+              </div>
+              <div class="pricing-dropdowns-wrapp">
+                <div class="pricing-dropdown">
+                  <div class="dropdown-toggle">
+                    <span>Cosmetology</span>
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 12L2 6h12z' fill='%23000'/%3E%3C/svg%3E" alt="" class="dropdown-icon" />
+                  </div>
+                  <div class="dropdown-list">
+                    <div class="dropdown-inner-item"><span>Face cleaning, vacuum</span><span>$45</span></div>
+                    <div class="dropdown-inner-item"><span>Face cleaning, ultrasonic</span><span>$45</span></div>
+                    <div class="dropdown-inner-item"><span>Face cleaning, mechanical</span><span>$45</span></div>
+                    <div class="dropdown-inner-item"><span>Azelaic peeling</span><span>$45</span></div>
+                    <div class="dropdown-inner-item"><span>Salicylic peeling</span><span>$45</span></div>
+                    <div class="dropdown-inner-item"><span>Hydrating complex care</span><span>$45</span></div>
+                  </div>
+                </div>
+                <div class="pricing-dropdown">
+                  <div class="dropdown-toggle">
+                    <span>Massage</span>
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 12L2 6h12z' fill='%23000'/%3E%3C/svg%3E" alt="" class="dropdown-icon" />
+                  </div>
+                  <div class="dropdown-list">
+                    <div class="dropdown-inner-item"><span>Face cleaning, vacuum</span><span>$45</span></div>
+                    <div class="dropdown-inner-item"><span>Face cleaning, ultrasonic</span><span>$45</span></div>
+                    <div class="dropdown-inner-item"><span>Face cleaning, mechanical</span><span>$45</span></div>
+                    <div class="dropdown-inner-item"><span>Azelaic peeling</span><span>$45</span></div>
+                    <div class="dropdown-inner-item"><span>Salicylic peeling</span><span>$45</span></div>
+                    <div class="dropdown-inner-item"><span>Hydrating complex care</span><span>$45</span></div>
+                  </div>
+                </div>
+                <div class="pricing-dropdown">
+                  <div class="dropdown-toggle">
+                    <span>Nails service</span>
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 12L2 6h12z' fill='%23000'/%3E%3C/svg%3E" alt="" class="dropdown-icon" />
+                  </div>
+                  <div class="dropdown-list">
+                    <div class="dropdown-inner-item"><span>Face cleaning, vacuum</span><span>$45</span></div>
+                    <div class="dropdown-inner-item"><span>Face cleaning, ultrasonic</span><span>$45</span></div>
+                    <div class="dropdown-inner-item"><span>Face cleaning, mechanical</span><span>$45</span></div>
+                    <div class="dropdown-inner-item"><span>Azelaic peeling</span><span>$45</span></div>
+                    <div class="dropdown-inner-item"><span>Salicylic peeling</span><span>$45</span></div>
+                    <div class="dropdown-inner-item"><span>Hydrating complex care</span><span>$45</span></div>
+                  </div>
+                </div>
+                <div class="pricing-dropdown">
+                  <div class="dropdown-toggle">
+                    <span>Makeup</span>
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 12L2 6h12z' fill='%23000'/%3E%3C/svg%3E" alt="" class="dropdown-icon" />
+                  </div>
+                  <div class="dropdown-list">
+                    <div class="dropdown-inner-item"><span>Face cleaning, vacuum</span><span>$45</span></div>
+                    <div class="dropdown-inner-item"><span>Face cleaning, ultrasonic</span><span>$45</span></div>
+                    <div class="dropdown-inner-item"><span>Face cleaning, mechanical</span><span>$45</span></div>
+                    <div class="dropdown-inner-item"><span>Azelaic peeling</span><span>$45</span></div>
+                    <div class="dropdown-inner-item"><span>Salicylic peeling</span><span>$45</span></div>
+                    <div class="dropdown-inner-item"><span>Hydrating complex care</span><span>$45</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="pricing-button">
+                <a href="#" data-open-popup class="button">
+                  Book a visit
+                  <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 1l5 5m0 0l-5 5m5-5H1" stroke="currentColor" stroke-width="1.5"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section id="Gallery" class="section">
+        <div class="container">
+          <h2 class="align-left">Gallery of our space</h2>
+          <div class="gallery-stack">
+            <div class="gallery-first">
+              <img src={gallery1} alt="Salon interior" class="gallery-image" loading="lazy" />
+            </div>
+            <div class="gallery-second">
+              <img src={gallery2} alt="Salon treatment room" class="gallery-image" loading="lazy" />
+            </div>
+            <div class="gallery-third">
+              <img src={gallery3} alt="Salon styling station" class="gallery-image" loading="lazy" />
+            </div>
+            <div class="gallery-fourth">
+              <img src={gallery4} alt="Salon reception" class="gallery-image" loading="lazy" />
+            </div>
+            <div>
+              <img src={gallery5} alt="Salon products" class="gallery-image" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews -->
+      <section class="section reviews-section">
+        <div class="container">
+          <h2 class="align-left">Reviews</h2>
+          <div class="reviews-wrapp">
+            <div class="reviews-item">
+              <div><p class="reviews-name">Amanda Dolson</p></div>
+              <div>
+                <div class="starts-block">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1l2.5 5.1L18 6.8l-4 3.9.9 5.6L10 13.3l-5 2.4.9-5.6L2 6.8l5.5-.7z' fill='%23f8c497'/%3E%3C/svg%3E" alt="Star" />
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1l2.5 5.1L18 6.8l-4 3.9.9 5.6L10 13.3l-5 2.4.9-5.6L2 6.8l5.5-.7z' fill='%23f8c497'/%3E%3C/svg%3E" alt="Star" />
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1l2.5 5.1L18 6.8l-4 3.9.9 5.6L10 13.3l-5 2.4.9-5.6L2 6.8l5.5-.7z' fill='%23f8c497'/%3E%3C/svg%3E" alt="Star" />
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1l2.5 5.1L18 6.8l-4 3.9.9 5.6L10 13.3l-5 2.4.9-5.6L2 6.8l5.5-.7z' fill='%23f8c497'/%3E%3C/svg%3E" alt="Star" />
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1l2.5 5.1L18 6.8l-4 3.9.9 5.6L10 13.3l-5 2.4.9-5.6L2 6.8l5.5-.7z' fill='%23f8c497'/%3E%3C/svg%3E" alt="Star" />
+                </div>
+                <p class="reviews-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+            <div class="reviews-item">
+              <div><p class="reviews-name">Sarah Mitchell</p></div>
+              <div>
+                <div class="starts-block">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1l2.5 5.1L18 6.8l-4 3.9.9 5.6L10 13.3l-5 2.4.9-5.6L2 6.8l5.5-.7z' fill='%23f8c497'/%3E%3C/svg%3E" alt="Star" />
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1l2.5 5.1L18 6.8l-4 3.9.9 5.6L10 13.3l-5 2.4.9-5.6L2 6.8l5.5-.7z' fill='%23f8c497'/%3E%3C/svg%3E" alt="Star" />
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1l2.5 5.1L18 6.8l-4 3.9.9 5.6L10 13.3l-5 2.4.9-5.6L2 6.8l5.5-.7z' fill='%23f8c497'/%3E%3C/svg%3E" alt="Star" />
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1l2.5 5.1L18 6.8l-4 3.9.9 5.6L10 13.3l-5 2.4.9-5.6L2 6.8l5.5-.7z' fill='%23f8c497'/%3E%3C/svg%3E" alt="Star" />
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1l2.5 5.1L18 6.8l-4 3.9.9 5.6L10 13.3l-5 2.4.9-5.6L2 6.8l5.5-.7z' fill='%23f8c497'/%3E%3C/svg%3E" alt="Star" />
+                </div>
+                <p class="reviews-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+            <div class="reviews-item">
+              <div><p class="reviews-name">Jessica Park</p></div>
+              <div>
+                <div class="starts-block">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1l2.5 5.1L18 6.8l-4 3.9.9 5.6L10 13.3l-5 2.4.9-5.6L2 6.8l5.5-.7z' fill='%23f8c497'/%3E%3C/svg%3E" alt="Star" />
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1l2.5 5.1L18 6.8l-4 3.9.9 5.6L10 13.3l-5 2.4.9-5.6L2 6.8l5.5-.7z' fill='%23f8c497'/%3E%3C/svg%3E" alt="Star" />
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1l2.5 5.1L18 6.8l-4 3.9.9 5.6L10 13.3l-5 2.4.9-5.6L2 6.8l5.5-.7z' fill='%23f8c497'/%3E%3C/svg%3E" alt="Star" />
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3E%3Cpath d='M10 1l2.5 5.1L18 6.8l-4 3.9.9 5.6L10 13.3l-5 2.4.9-5.6L2 6.8l5.5-.7z' fill='%23f8c497'/%3E%3C/svg%3E" alt="Star" />
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1l2.5 5.1L18 6.8l-4 3.9.9 5.6L10 13.3l-5 2.4.9-5.6L2 6.8l5.5-.7z' fill='%23ddd'/%3E%3C/svg%3E" alt="Star" />
+                </div>
+                <p class="reviews-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form -->
+      <section class="section">
+        <div class="container">
+          <div class="form-wrapper">
+            <div class="form-inner">
+              <div class="form-head">
+                <h2>Want to find a suitable service for you?</h2>
+                <p class="form-subhead">Leave your phone number and we will call you back</p>
+              </div>
+              <form class="form">
+                <input class="input" type="tel" placeholder="Your phone number" />
+                <button class="submit-button" type="submit">Submit</button>
+              </form>
+            </div>
+            <div>
+              <img src={formImg} alt="Salon decor" class="form-left-image" loading="lazy" />
+            </div>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='120'%3E%3Ccircle cx='100' cy='100' r='90' fill='%23f8e8da' opacity='0.5'/%3E%3C/svg%3E" alt="" class="form-right-image" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="section footer">
+      <div class="container">
+        <div class="footer-wrapp">
+          <img src="/logo_white.png" alt="Velvet Bloom" class="footer-logo" />
+          <div class="footer-top-block">
+            <div class="footer-info">
+              <p>334 Oakland Drive Brooklyn, NY 11218</p>
+              <p><a href="mailto:hello@velvetbloom.com">hello@velvetbloom.com</a></p>
+              <p><a href="tel:+15551234567">+1 555 123 4567</a></p>
+            </div>
+            <div class="social-networks">
+              <a href="https://facebook.com" aria-label="Facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://twitter.com" aria-label="Twitter">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="https://instagram.com" aria-label="Instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+            </div>
+            <div class="footer-menu">
+              <a href="/privacy-policy">Privacy notice</a>
+              <a href="/license">License</a>
+              <a href="/ui-kit">UI kit</a>
+              <a href="/changelog">Changelog</a>
+            </div>
+          </div>
+          <div class="footer-bottom-block">
+            <p class="footer-feedback-text">Want to find a suitable service for you?</p>
+            <a href="#" data-open-popup class="button">Book a visit
+              <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 1l5 5m0 0l-5 5m5-5H1" stroke="currentColor" stroke-width="1.5"/></svg>
+            </a>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='120'%3E%3Ccircle cx='100' cy='100' r='80' fill='%23f8e8da' opacity='0.15'/%3E%3C/svg%3E" alt="" class="footer-decor" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="powered-by">Powered by WebDevful</div>
+
+    <!-- Booking Popup Modal -->
+    <div class="popup">
+      <div class="popup-wrapper">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18 6L6 18M6 6l12 12' stroke='%23000' stroke-width='2'/%3E%3C/svg%3E" alt="Close" class="popup-close" />
+        <div class="popup-left-part">
+          <div class="popup-head"><h2>Book a visit</h2></div>
+          <form class="popup-form">
+            <input class="form-input" type="text" placeholder="Your name" />
+            <input class="form-input" type="tel" placeholder="Phone number" />
+            <input class="form-input" type="text" placeholder="Service" />
+            <div class="button popup-button">
+              <button class="submit-popup button" type="submit">Send</button>
+              <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 1l5 5m0 0l-5 5m5-5H1" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+          </form>
+        </div>
+        <img src={popupImg} alt="Salon" class="popup-image" loading="lazy" />
+      </div>
+    </div>
+
+    <!-- Gallery Lightbox -->
+    <div class="lightbox-overlay">
+      <button class="lightbox-close">&times;</button>
+      <img src="" alt="Gallery" />
+    </div>
+
+    <!-- Swiper for services mobile slider -->
+    <script>
+      import Swiper from 'swiper';
+      import { Navigation, Pagination } from 'swiper/modules';
+      import 'swiper/css';
+      import 'swiper/css/navigation';
+      import 'swiper/css/pagination';
+
+      new Swiper('.services-slider', {
+        modules: [Navigation, Pagination],
+        slidesPerView: 1,
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        loop: true,
+      });
+    </script>
+
+    <!-- Main JS -->
+    <script src="../scripts/main.js"></script>
+  </body>
 </html>
