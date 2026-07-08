@@ -71,5 +71,5 @@ type: landing-page
 ## Source Dependency Map
 
 - Source runtime: Webflow runtime on jQuery 3.5.1, WebFont loader, Webflow CSS slider/nav/lightbox patterns.
-- Product runtime: Astro static build, Google Fonts CSS loading for the same Forum/Cormorant families, jQuery 4.0.x for the interaction layer, and local Webflow-style slider/accordion/modal/lightbox behavior.
+- Product runtime: Astro static build, Google Fonts CSS loading for the same Forum/Cormorant families, jQuery 3.7.1 for the interaction layer, and local Webflow-style slider/accordion/modal/lightbox behavior.
 - Removed non-source dependencies: Swiper and FontAwesome are not part of the Magnolia source stack and are intentionally not used.

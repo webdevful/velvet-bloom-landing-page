@@ -15,6 +15,6 @@
   "dependencies": {
     "@google/design.md": "^0.3.0",
     "astro": "^7.0.3",
-    "jquery": "^4.0.0"
+    "jquery": "^3.7.1"
   }
 }
