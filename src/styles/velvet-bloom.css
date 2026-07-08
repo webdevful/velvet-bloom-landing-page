@@ -227,19 +227,21 @@ h2 { margin-bottom: 64px; }
 .services-link img { width: 25px; height: auto; }
 .services-item-right { flex-shrink: 0; }
 .services-item-right img {
-  width: 230px;
-  height: 270px;
+  width: 220px;
+  height: 240px;
   object-fit: cover;
   border-radius: 50%;
+  /* thin source-style outer ring with a paper-toned gap */
+  box-shadow: 0 0 0 8px #f9f1ea, 0 0 0 9px rgba(31, 32, 36, 0.12);
 }
 
-/* Services mobile slider — hide on desktop. `.services-slider.swiper` (two
-   classes) beats swiper/css `.swiper{display:block}` (one class). */
-.services-slider.swiper { display: none; }
+/* Services mobile slider — hidden on desktop; the `swiper` class is added by JS
+   only at the mobile breakpoint, so no hidden slider exists on desktop. */
+.services-slider { display: none; }
 
 @media (max-width: 768px) {
   .services-grid { display: none; }
-  .services-slider.swiper { display: block; position: relative; }
+  .services-slider { display: block; position: relative; }
   .swiper-slide .services-item { flex-direction: column; }
   .swiper-slide .services-item-right img { width: 100%; height: 250px; }
   .services-slider .swiper-button-next,
@@ -288,7 +290,23 @@ h2 { margin-bottom: 64px; }
   gap: 48px;
   align-items: start;
 }
-.pricng-images-wrapp img { width: 100%; max-width: 547px; border-radius: 0; }
+/* Two-image offset collage (source: tall flatlay + overlapping botanical inset) */
+.pricng-images-wrapp { position: relative; max-width: 560px; padding-bottom: 56px; }
+.pricing-main-image {
+  width: 84%;
+  aspect-ratio: 547 / 700;
+  object-fit: cover;
+  display: block;
+}
+.pricing-inset-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 46%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  box-shadow: -12px -12px 0 var(--color-paper);
+}
 .pricing-head { margin-bottom: 32px; }
 .pricing-dropdowns-wrapp { display: flex; flex-direction: column; gap: 0; }
 .pricing-dropdown { border-bottom: 1px solid var(--color-line); }
@@ -427,8 +445,21 @@ h2 { margin-bottom: 64px; }
 .contact-section .form-head h2 { text-align: center; }
 .contact-section .form-inner { display: flex; flex-direction: column; align-items: center; }
 .contact-section .form { justify-content: center; width: 100%; max-width: 460px; }
-.contact-section .form-left-image { display: none; }
-.contact-section .form-right-image { left: -30px; right: auto; top: -20px; bottom: auto; width: 90px; }
+.contact-section .form-left-image {
+  display: block;
+  position: absolute;
+  left: -56px;
+  bottom: -48px;
+  width: 104px;
+  height: 104px;
+  object-fit: cover;
+  border-radius: 50% 50% 50% 0;
+  opacity: 0.95;
+}
+.contact-section .form-right-image { left: auto; right: -48px; top: -40px; bottom: auto; width: 120px; }
+@media (max-width: 900px) {
+  .contact-section .form-left-image { display: none; }
+}
 .form-head { margin-bottom: 24px; }
 .form-head h2 { text-align: left; margin-bottom: 12px; }
 .form-subhead { font-size: 18px; opacity: 0.8; }

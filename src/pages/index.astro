@@ -1,20 +1,22 @@
 ---
 import "../styles/velvet-bloom.css";
 
-// Unsplash photo replacements for source imagery
-const cosmetologyImg = "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=440&h=440&fit=crop";
-const massageImg = "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=440&h=440&fit=crop";
-const nailsImg = "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=440&h=440&fit=crop";
-const makeupImg = "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=440&h=440&fit=crop";
-const pricingImg = "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=547&h=760&fit=crop";
-const gallery1 = "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1382&h=903&fit=crop";
-const gallery2 = "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&h=600&fit=crop";
-const gallery3 = "https://images.pexels.com/photos/3992879/pexels-photo-3992879.jpeg?auto=compress&cs=tinysrgb&w=1382";
-const gallery4 = "https://images.pexels.com/photos/3985326/pexels-photo-3985326.jpeg?auto=compress&cs=tinysrgb&w=600";
-const gallery5 = "https://images.pexels.com/photos/3993116/pexels-photo-3993116.jpeg?auto=compress&cs=tinysrgb&w=600";
-const formImg = "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&h=400&fit=crop";
-const popupImg = "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&h=600&fit=crop";
-const heroBgImg = "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=680&h=620&fit=crop";
+// Local, licensed (Pexels) media — matched to the Magnolia source compositions.
+// Provenance recorded per file in public/assets/img/*.provenance.json.
+const cosmetologyImg = "/assets/img/service-cosmetology.jpg";
+const massageImg = "/assets/img/service-massage.jpg";
+const nailsImg = "/assets/img/service-nails.jpg";
+const makeupImg = "/assets/img/service-makeup.jpg";
+const pricingImg = "/assets/img/pricing-flatlay.jpg";
+const pricingLeaf = "/assets/img/pricing-leaf.jpg";
+const gallery1 = "/assets/img/gallery-salon.jpg";
+const gallery2 = "/assets/img/gallery-hairwash.jpg";
+const gallery3 = "/assets/img/gallery-brushes.jpg";
+const gallery4 = "/assets/img/gallery-stylist.jpg";
+const gallery5 = "/assets/img/gallery-spa.jpg";
+const formImg = "/assets/img/pricing-leaf.jpg";
+const popupImg = "/assets/img/popup-spa.jpg";
+const heroBgImg = "/assets/img/hero-face.jpg";
 ---
 
 <html lang="en">
@@ -143,8 +145,9 @@ const heroBgImg = "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?
             </div>
           </div>
 
-          <!-- Mobile slider -->
-          <div class="services-slider swiper">
+          <!-- Mobile slider (the `swiper` class is added by JS only at the
+               mobile breakpoint, so the hidden desktop DOM carries no slider) -->
+          <div class="services-slider">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="services-item">
@@ -245,7 +248,8 @@ const heroBgImg = "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?
         <div class="container">
           <div class="pricing-wrapp">
             <div class="pricng-images-wrapp">
-              <img src={pricingImg} alt="Beauty treatments" class="pricing-main-image" loading="lazy" />
+              <img src={pricingImg} alt="Spa treatment essentials" class="pricing-main-image" width="547" height="760" loading="lazy" />
+              <img src={pricingLeaf} alt="Botanical detail" class="pricing-inset-image" width="260" height="220" loading="lazy" />
             </div>
             <div class="pricing-table">
               <div id="Pricing" class="pricing-head">
@@ -491,13 +495,32 @@ const heroBgImg = "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?
       import 'swiper/css/navigation';
       import 'swiper/css/pagination';
 
-      new Swiper('.services-slider', {
-        modules: [Navigation, Pagination],
-        slidesPerView: 1,
-        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-        pagination: { el: '.swiper-pagination', clickable: true },
-        loop: true,
-      });
+      // The services slider is a mobile-only presentation of the desktop grid.
+      // Initialise it only at the mobile breakpoint so the desktop DOM carries no
+      // hidden, initialised Swiper. `rewind` (not `loop`) keeps every one of the
+      // four source slides deterministically reachable via the nav arrows.
+      const mq = window.matchMedia('(max-width: 768px)');
+      let servicesSwiper = null;
+      const sliderEl = document.querySelector('.services-slider');
+      function syncServicesSlider() {
+        if (!sliderEl) return;
+        if (mq.matches && !servicesSwiper) {
+          sliderEl.classList.add('swiper');
+          servicesSwiper = new Swiper(sliderEl, {
+            modules: [Navigation, Pagination],
+            slidesPerView: 1,
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            rewind: true,
+          });
+        } else if (!mq.matches && servicesSwiper) {
+          servicesSwiper.destroy(true, true);
+          servicesSwiper = null;
+          sliderEl.classList.remove('swiper');
+        }
+      }
+      syncServicesSlider();
+      mq.addEventListener('change', syncServicesSlider);
     </script>
 
     <!-- Main JS -->
