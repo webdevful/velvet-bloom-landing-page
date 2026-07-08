@@ -38,3 +38,27 @@ Ownership and license:
 Photographic section assets live in `public/assets/img/`. Each image has a
 neighboring `.provenance.json` file with its Pexels provider URL, author,
 license note, local path, and downloaded width.
+
+## Standards Of Care Icons
+
+The Standards of care section uses local Font Awesome Free icons from the
+product dependency `@fortawesome/fontawesome-free` version `^7.3.0`.
+
+Icon mapping:
+
+- Hygiene / eco care: `fa-solid fa-seedling`
+- Certified specialist / quality: `fa-solid fa-award`
+- Comfort / spa atmosphere: `fa-solid fa-spa`
+
+Usage:
+
+- Imported in `src/pages/index.astro` from
+  `@fortawesome/fontawesome-free/css/all.min.css`.
+- Rendered as `<i>` elements in the Standards of care section.
+- CSS controls only the section layout, icon size, color, and positioning; it
+  does not draw or invent the icon artwork.
+
+License:
+
+- Font Awesome Free package license as distributed by npm. These icons replace
+  the source SVG icon roles without copying source-hosted SVG files.
