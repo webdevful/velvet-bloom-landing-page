@@ -1,5 +1,6 @@
 ---
 import "../styles/velvet-bloom.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const logo = "/logo.png";
 const heroImg = "/assets/img/hero-face.jpg";
@@ -36,15 +37,15 @@ const services = [
 
 const standards = [
   {
-    icon: "drop",
+    icon: "fa-solid fa-seedling",
     copy: "Every tool, towel, and treatment station is prepared with careful hygiene standards before your visit begins.",
   },
   {
-    icon: "badge",
+    icon: "fa-solid fa-award",
     copy: "Your appointment is handled by trained specialists who balance technical precision with an easy, attentive touch.",
   },
   {
-    icon: "pillow",
+    icon: "fa-solid fa-spa",
     copy: "Soft light, warm textures, and thoughtful pacing make each service feel calm from arrival through checkout.",
   },
 ];
@@ -212,7 +213,7 @@ const reviews = [
             {standards.map((standard, index) => (
               <div class="standart-item">
                 <div class="standart-image-wrapp">
-                  <span class={`standart-icon icon-${standard.icon}`} aria-hidden="true"></span>
+                  <i class={`standart-icon ${standard.icon}`} aria-hidden="true"></i>
                   <span class={`service-image-absolute position-${index + 1}`} aria-hidden="true"></span>
                 </div>
                 <p class="service-text">{standard.copy}</p>

@@ -432,38 +432,13 @@ h2 {
 .standart-icon {
   width: 44px;
   height: 44px;
-  border: 1.5px solid var(--ink);
-  position: relative;
   z-index: 1;
-  display: block;
-}
-
-.icon-drop {
-  border-radius: 50% 50% 50% 0;
-  transform: rotate(-45deg);
-}
-
-.icon-badge {
-  width: 42px;
-  height: 42px;
-  border-radius: 100%;
-}
-
-.icon-badge::after {
-  content: "";
-  width: 16px;
-  height: 18px;
-  border-left: 1.5px solid var(--ink);
-  border-right: 1.5px solid var(--ink);
-  position: absolute;
-  left: 50%;
-  top: 30px;
-  transform: translateX(-50%);
-}
-
-.icon-pillow {
-  border-radius: 8px 15px 8px 15px;
-  transform: rotate(10deg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  font-size: 40px;
+  line-height: 1;
 }
 
 .service-image-absolute {
