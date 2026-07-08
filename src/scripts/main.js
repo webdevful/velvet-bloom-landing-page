@@ -1,129 +1,101 @@
-// Velvet Bloom - Main Interactions
+import $ from "jquery";
 
-document.addEventListener('DOMContentLoaded', () => {
-  // --- Navbar scroll effect ---
-  const navbar = document.querySelector('.navbar');
-  const onScroll = () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
+window.jQuery = $;
+window.$ = $;
+
+$(() => {
+  const $body = $("body");
+  const $menu = $(".navbar-menu");
+  const $navButton = $(".nav-button");
+
+  const closeMenu = () => {
+    $menu.removeClass("open");
+    $navButton.removeClass("open").attr("aria-expanded", "false");
+    $body.removeClass("no-scroll");
   };
-  window.addEventListener('scroll', onScroll, { passive: true });
 
-  // --- Mobile menu toggle ---
-  const navButton = document.querySelector('.nav-button');
-  const navbarMenu = document.querySelector('.navbar-menu');
-  const navOverlay = document.querySelector('.nav-overlay');
-
-  if (navButton && navbarMenu) {
-    const toggleMenu = (open) => {
-      navbarMenu.classList.toggle('open', open);
-      navButton.classList.toggle('open', open);
-      if (navOverlay) navOverlay.classList.toggle('open', open);
-      document.body.style.overflow = open ? 'hidden' : '';
-    };
-
-    navButton.addEventListener('click', () => {
-      const isOpen = navbarMenu.classList.contains('open');
-      toggleMenu(!isOpen);
-    });
-
-    if (navOverlay) {
-      navOverlay.addEventListener('click', () => toggleMenu(false));
-    }
-
-    // Close menu on nav link click
-    navbarMenu.querySelectorAll('.header-nav-link').forEach(link => {
-      link.addEventListener('click', () => toggleMenu(false));
-    });
-  }
-
-  // --- Pricing accordion dropdowns ---
-  document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      const isOpen = toggle.classList.contains('open');
-      // Close all
-      document.querySelectorAll('.dropdown-toggle').forEach(t => {
-        t.classList.remove('open');
-        t.nextElementSibling?.classList.remove('open');
-      });
-      // Open clicked if it was closed
-      if (!isOpen) {
-        toggle.classList.add('open');
-        const list = toggle.nextElementSibling;
-        if (list) list.classList.add('open');
-      }
-    });
+  $navButton.on("click", () => {
+    const open = !$menu.hasClass("open");
+    $menu.toggleClass("open", open);
+    $navButton.toggleClass("open", open).attr("aria-expanded", open ? "true" : "false");
+    $body.toggleClass("no-scroll", open);
   });
 
-  // --- Gallery lightbox ---
-  const lightbox = document.querySelector('.lightbox-overlay');
-  const lightboxImg = lightbox?.querySelector('img');
-  const lightboxClose = lightbox?.querySelector('.lightbox-close');
+  $(".header-nav-link").on("click", closeMenu);
 
-  if (lightbox && lightboxImg) {
-    document.querySelectorAll('.gallery-image').forEach(img => {
-      img.addEventListener('click', () => {
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt;
-        lightbox.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      });
-    });
+  $(".dropdown-toggle").on("click", function () {
+    const $toggle = $(this);
+    const wasOpen = $toggle.hasClass("open");
 
-    const closeLightbox = () => {
-      lightbox.classList.remove('open');
-      document.body.style.overflow = '';
-    };
+    $(".dropdown-toggle").removeClass("open").attr("aria-expanded", "false");
+    $(".dropdown-list").removeClass("open");
 
-    lightboxClose?.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) closeLightbox();
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeLightbox();
-    });
-  }
+    if (!wasOpen) {
+      $toggle.addClass("open").attr("aria-expanded", "true");
+      $toggle.next(".dropdown-list").addClass("open");
+    }
+  });
 
-  // --- Booking popup modal ---
-  const popup = document.querySelector('.popup');
-  const popupClose = popup?.querySelector('.popup-close');
+  const $popup = $(".popup");
+  const closePopup = () => {
+    $popup.removeClass("open").attr("aria-hidden", "true");
+    $body.removeClass("no-scroll");
+  };
 
-  if (popup) {
-    document.querySelectorAll('[data-open-popup]').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        popup.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      });
-    });
+  $("[data-open-popup]").on("click", (event) => {
+    event.preventDefault();
+    closeMenu();
+    $popup.addClass("open").attr("aria-hidden", "false");
+    $body.addClass("no-scroll");
+  });
 
-    const closePopup = () => {
-      popup.classList.remove('open');
-      document.body.style.overflow = '';
-    };
+  $(".popup-close").on("click", closePopup);
+  $popup.on("click", function (event) {
+    if (event.target === this) closePopup();
+  });
 
-    popupClose?.addEventListener('click', closePopup);
-    popup.addEventListener('click', (e) => {
-      if (e.target === popup) closePopup();
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closePopup();
-    });
-  }
+  const $lightbox = $(".lightbox-overlay");
+  const $lightboxImage = $lightbox.find("img");
+  const closeLightbox = () => {
+    $lightbox.removeClass("open").attr("aria-hidden", "true");
+    $body.removeClass("no-scroll");
+  };
 
-  // --- Smooth scroll for anchor links ---
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      const href = anchor.getAttribute('href');
-      if (href === '#') return;
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
+  $(".gallery-image").on("click", function () {
+    $lightboxImage.attr({ src: this.src, alt: this.alt });
+    $lightbox.addClass("open").attr("aria-hidden", "false");
+    $body.addClass("no-scroll");
+  });
+
+  $(".lightbox-close").on("click", closeLightbox);
+  $lightbox.on("click", function (event) {
+    if (event.target === this) closeLightbox();
+  });
+
+  $(document).on("keydown", (event) => {
+    if (event.key === "Escape") {
+      closePopup();
+      closeLightbox();
+      closeMenu();
+    }
+  });
+
+  const $slides = $(".services-slide");
+  const $dots = $(".slider-nav span");
+  let activeSlide = 0;
+
+  const showSlide = (index) => {
+    if (!$slides.length) return;
+    activeSlide = (index + $slides.length) % $slides.length;
+    $slides.removeClass("active").eq(activeSlide).addClass("active");
+    $dots.removeClass("active").eq(activeSlide).addClass("active");
+  };
+
+  $(".left-arrow").on("click", () => showSlide(activeSlide - 1));
+  $(".right-arrow").on("click", () => showSlide(activeSlide + 1));
+  showSlide(0);
+
+  $("form").on("submit", (event) => {
+    event.preventDefault();
   });
 });

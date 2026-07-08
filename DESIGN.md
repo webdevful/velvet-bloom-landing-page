@@ -38,9 +38,9 @@ type: landing-page
     "bodyLineHeight": "1.5"
   },
   "spacing": {
-    "sectionPadding": "80px",
-    "containerMax": "1200px",
-    "containerPad": "24px"
+    "sectionMargin": "120px",
+    "containerMax": "1390px",
+    "containerPad": "25px"
   }
 }
 ```
@@ -48,23 +48,28 @@ type: landing-page
 ## Structure
 
 1. Popup booking modal (overlay)
-2. Transparent fixed navbar with logo, nav links (Services, Standards, Pricing, Gallery), Contact CTA
+2. Top Webflow-style header section with logo image, nav links (Services, Standards, Pricing, Gallery), Contact CTA
 3. Hero: split layout (heading left, image right, subtitle + CTA below heading)
-4. Services: 4-card grid (Cosmetology, Massage, Nails, Makeup) with image + description; mobile Swiper slider
+4. Services: 4-card grid (Cosmetology, Massage, Nails, Makeup) with image + description; mobile Webflow-style slider
 5. Standards of care: 3-icon cards (Safety, Expertise, Comfort) with decorative ellipses
 6. Pricing: split layout (image left, accordion dropdown pricing menus right)
 7. Gallery: 5-image masonry grid with lightbox
 8. Reviews: 3 testimonial cards with star ratings on warm background
-9. Contact form: phone number form with decor images
-10. Footer: logo, address/email/phone, social links, footer menu, bottom CTA band
-11. Powered by WebDevful signature
+9. Contact form: centered peach callback band with phone form and decor images
+10. Footer: logo image slot, address/email/phone, social links, footer menu, bottom CTA band
+11. Powered by WebDevful signature inside the footer
 
 ## Interactions
 
-- Sticky navbar with scroll-triggered white background
-- Mobile hamburger menu with overlay
+- Top header section and mobile hamburger menu
 - Pricing accordion dropdowns (single open at a time)
 - Gallery lightbox overlay
 - Booking popup modal via `data-open-popup` triggers
-- Services Swiper slider on mobile (1 slide, loop, nav arrows + pagination)
+- Services Webflow-style mobile slider behavior implemented with local jQuery 3.7.x
 - Smooth scroll for anchor links
+
+## Source Dependency Map
+
+- Source runtime: Webflow runtime on jQuery 3.5.1, WebFont loader, Webflow CSS slider/nav/lightbox patterns.
+- Product runtime: Astro static build, Google Fonts CSS loading for the same Forum/Cormorant families, jQuery 4.0.x for the interaction layer, and local Webflow-style slider/accordion/modal/lightbox behavior.
+- Removed non-source dependencies: Swiper and FontAwesome are not part of the Magnolia source stack and are intentionally not used.
