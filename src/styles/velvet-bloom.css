@@ -99,7 +99,7 @@ h2 {
 .section.header {
   z-index: 99;
   margin-top: 26px;
-  margin-bottom: 0;
+  margin-bottom: 120px;
   position: relative;
 }
 
@@ -155,6 +155,7 @@ h2 {
 .button.small-button {
   padding-top: 10px;
   padding-bottom: 10px;
+  line-height: 1.1875;
 }
 
 .button.small-button.button-mob {
@@ -235,7 +236,9 @@ h2 {
 }
 
 .navbar-links-wrapp {
-  gap: 66px;
+  display: block;
+  transform: scale(1.1);
+  transform-origin: 50% 50%;
 }
 
 .header-links-wrapp {
@@ -1224,6 +1227,7 @@ h2 {
     display: flex;
     position: absolute;
     inset: 0;
+    transform: none;
   }
 
   .header-links-wrapp {
