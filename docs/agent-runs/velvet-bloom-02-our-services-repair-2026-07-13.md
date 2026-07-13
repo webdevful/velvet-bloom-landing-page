@@ -62,3 +62,16 @@ approved local photo is clipped by the measured inner contour, and a separate
 scalable outline layer carries the measured outer contour. The four source
 composite ratios are preserved individually. Return evidence lives in
 `qa/lpf-section-buckets/velvet-bloom/02-our-services/returns/01-frame-contour/`.
+
+Public browser verification passed at the stable deployment. The computed
+public image has `border-radius: 0px`, `box-shadow: none`, one organic clip
+path, and one independent outline path. Desktop has no dormant Swiper;
+tablet/mobile changed state and visited `4/4` slides. The storefront funnel
+also passed with hero/preview parity MAE `0.02` and RMS `0.79`.
+
+- Return product PR:
+  `https://github.com/webdevful/velvet-bloom-landing-page/pull/10`
+- Return merge: `d1d40f6d38e68cee9fc71e63c9ea3423839fbe4a`
+- Return immutable deployment:
+  `https://f550d2a2.velvet-bloom-landing-page.pages.dev`
+- Stable deployment: `https://velvet-bloom-landing-page.pages.dev/`
