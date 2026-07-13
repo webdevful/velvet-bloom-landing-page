@@ -349,8 +349,15 @@ h2 {
   margin-top: 76px;
 }
 
+#Services .container {
+  display: flow-root;
+}
+
+#Services h2 {
+  margin-top: 20px;
+}
+
 .services-item {
-  min-height: 460px;
   display: grid;
   grid-template-columns: .5fr 1fr;
   align-items: flex-start;
@@ -376,27 +383,28 @@ h2 {
 .services-item-head {
   font-family: var(--heading);
   font-size: 24px;
-  line-height: 1;
+  line-height: 1.1875;
 }
 
 .service-item-description {
   font-style: italic;
-  line-height: 1.25;
+  line-height: 1.5;
 }
 
 .services-link {
+  min-height: 43px;
   padding-top: 7px;
   padding-bottom: 7px;
 }
 
 .services-item-right {
-  display: flex;
-  justify-content: center;
+  display: block;
 }
 
 .image {
-  width: 320px;
-  height: 360px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 398 / 449;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 0 0 9px var(--back-color), 0 0 0 10px rgba(0, 0, 0, .12);
@@ -406,7 +414,7 @@ h2 {
   box-shadow: 0 0 0 9px var(--antique-white), 0 0 0 10px rgba(0, 0, 0, .12);
 }
 
-.services-slider {
+#Services .services-slider {
   display: none;
 }
 
@@ -1091,7 +1099,11 @@ h2 {
     display: none;
   }
 
-  .services-slider {
+  .services-item {
+    grid-template-columns: .8fr 1fr;
+  }
+
+  #Services .services-slider {
     height: auto;
     background: transparent;
     margin-top: 41px;
@@ -1312,7 +1324,12 @@ h2 {
 
   .image {
     width: 233px;
-    height: 250px;
+    height: auto;
+  }
+
+  .services-item-right {
+    width: 233px;
+    justify-self: center;
   }
 
   .standarts-wrapp {

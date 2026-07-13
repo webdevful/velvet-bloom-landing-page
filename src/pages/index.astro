@@ -14,25 +14,25 @@ const services = [
     id: "cosmetology",
     name: "Cosmetology",
     img: "/assets/img/service-cosmetology.jpg",
-    copy: "Professional skin treatments, cleansing rituals, and renewal care tailored to your complexion and pace.",
+    copy: "Personalized skin treatments, cleansing rituals, and restorative care that leave your complexion refreshed, balanced, and luminous at every unhurried visit.",
   },
   {
     id: "massage",
     name: "Massage",
     img: "/assets/img/service-massage.jpg",
-    copy: "Slow therapeutic bodywork that eases tension, restores calm, and helps you leave lighter.",
+    copy: "Slow therapeutic bodywork that eases deep tension, restores calm, supports circulation, and helps you leave feeling lighter through every measured touch.",
   },
   {
     id: "nails",
     name: "Nails service",
     img: "/assets/img/service-nails.jpg",
-    copy: "Clean manicures and pedicures with polished detail, premium products, and a soft finish.",
+    copy: "Meticulous manicures and pedicures shaped with premium products, polished detail, and a soft finish made to last beautifully through the final coat.",
   },
   {
     id: "makeup",
     name: "Makeup",
     img: "/assets/img/service-makeup.jpg",
-    copy: "Natural, event-ready, and editorial looks designed to enhance your own features.",
+    copy: "Natural, event-ready, and editorial makeup artistry tailored to your features, your style, and the way you want to feel with a finish that still feels like you.",
   },
 ];
 
@@ -179,7 +179,7 @@ const reviews = [
             ))}
           </div>
 
-          <div class="services-slider swiper" aria-label="Services carousel">
+          <div class="services-slider" aria-label="Services carousel">
             <div class="services-mask swiper-wrapper">
               {services.map((service, index) => (
                 <div class="services-slide swiper-slide" aria-label={`${index + 1} of ${services.length}`}>
