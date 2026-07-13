@@ -47,3 +47,18 @@ hidden duplicate carousel remains on desktop.
 
 Codify-back: the Velvet Bloom source-design contract now pins the service grid,
 card split/padding, copy leading, photo aspect ratio, and hidden desktop slider.
+
+## Owner return #1 — frame contour
+
+The owner returned the first pass because its `border-radius: 50%` image and
+concentric box-shadow rings did not reproduce the visible source construction.
+Live source inspection proved that Magnolia uses no CSS radius, border, shadow,
+mask, pseudo-element, or third-party frame library. Instead, every service
+image is a transparent WebP composite containing an irregular photograph alpha
+edge and a separate differently shaped outer hairline.
+
+The return replaces the false ellipse with `ServiceImageFrame.astro`. Each
+approved local photo is clipped by the measured inner contour, and a separate
+scalable outline layer carries the measured outer contour. The four source
+composite ratios are preserved individually. Return evidence lives in
+`qa/lpf-section-buckets/velvet-bloom/02-our-services/returns/01-frame-contour/`.
