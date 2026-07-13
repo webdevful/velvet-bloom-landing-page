@@ -39,6 +39,27 @@ Photographic section assets live in `public/assets/img/`. Each image has a
 neighboring `.provenance.json` file with its Pexels provider URL, author,
 license note, local path, and downloaded width.
 
+### Replacement shape contract
+
+- Source format: the approved Pexels replacements are local JPEG photographs;
+  they have no alpha channel or transparency.
+- Dimensions and aspect ratio: source files retain their downloaded pixel
+  dimensions. In the Our Services section, CSS usage renders each photograph
+  at 398 × 449px on desktop and 233 × 263px on mobile, an aspect ratio of
+  `398 / 449`, with `object-fit: cover` inside the source-shaped oval.
+- Section context and content relevance: the four service slots use distinct
+  cosmetology, massage, manicure, and makeup photographs that directly match
+  each card's service topic.
+- Reused status: each service photograph is used once in the visible desktop
+  grid; the mobile slider reuses that same approved service set as the
+  responsive representation of the same content, not as new decorative slots.
+- Slider media dimensions: mobile service slider media render at 233 × 263px;
+  tablet and desktop sizing follows the same CSS aspect-ratio contract.
+- Replacement contract: preserve local provider-backed media, the oval slot
+  geometry, rendered width and rendered height, and content-role mapping. Do
+  not copy source media or substitute generated, transparent, cutout, logo, or
+  interface artwork into these photo slots.
+
 ## Standards Of Care Icons
 
 The Standards of care section uses local Font Awesome Free icons from the

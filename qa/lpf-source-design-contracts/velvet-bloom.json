@@ -2,6 +2,65 @@
   "slug": "velvet-bloom",
   "sourceUrl": "https://magnolia-template.webflow.io/",
   "sourceLabel": "Magnolia (Webflow hosted template)",
+  "description": "Measured Magnolia-to-Velvet Bloom source-design contract. Section 2 checks pin the source 2x2 service grid, card split, oval photo geometry, typography rhythm, and desktop-only grid/mobile-only slider topology.",
+  "checks": [
+    {
+      "id": "services-desktop-grid",
+      "description": "Our Services keeps the source two-column desktop grid.",
+      "selector": ".services-grid",
+      "property": "grid-template-columns",
+      "expected": "1fr 1fr",
+      "severity": "error"
+    },
+    {
+      "id": "services-grid-gap",
+      "description": "Our Services keeps the source 16px card gutter.",
+      "selector": ".services-grid",
+      "property": "gap",
+      "expected": "16px",
+      "severity": "error"
+    },
+    {
+      "id": "services-card-columns",
+      "description": "Desktop cards keep the source text-to-photo split.",
+      "selector": ".services-item",
+      "property": "grid-template-columns",
+      "expected": ".5fr 1fr",
+      "severity": "error"
+    },
+    {
+      "id": "services-card-padding",
+      "description": "Desktop cards keep the source inset geometry.",
+      "selector": ".services-item",
+      "property": "padding",
+      "expected": "20px 20px 40px 40px",
+      "severity": "error"
+    },
+    {
+      "id": "services-copy-leading",
+      "description": "Service copy inherits the source 1.5 reading rhythm.",
+      "selector": ".service-item-description",
+      "property": "line-height",
+      "expected": "1.5",
+      "severity": "error"
+    },
+    {
+      "id": "services-photo-aspect",
+      "description": "Local service photos keep the measured source oval proportion near 398x449.",
+      "selector": ".image",
+      "property": "aspect-ratio",
+      "expected": "398 / 449",
+      "severity": "error"
+    },
+    {
+      "id": "services-desktop-slider-hidden",
+      "description": "The mobile Swiper cannot leak below the desktop 2x2 grid.",
+      "selector": "#Services .services-slider",
+      "property": "display",
+      "expected": "none",
+      "severity": "error"
+    }
+  ],
   "design_tokens": {
     "fonts": {
       "heading": "Forum, serif",

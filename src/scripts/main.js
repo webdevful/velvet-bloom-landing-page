@@ -82,24 +82,43 @@ $(() => {
     }
   });
 
-  if ($(".services-slider").length) {
-    new Swiper(".services-slider", {
-      modules: [Navigation, Pagination],
-      slidesPerView: 1,
-      loop: true,
-      speed: 0,
-      navigation: {
-        prevEl: ".services-slider .left-arrow",
-        nextEl: ".services-slider .right-arrow",
-      },
-      pagination: {
-        el: ".services-slider .slider-nav",
-        clickable: true,
-        bulletElement: "span",
-        renderBullet: (index, className) => `<span class="${className}">${index + 1}</span>`,
-      },
-    });
-  }
+  const servicesSlider = document.querySelector(".services-slider");
+  const servicesSliderBreakpoint = window.matchMedia("(max-width: 991px)");
+  let servicesSwiper = null;
+
+  const syncServicesSlider = () => {
+    if (!servicesSlider) return;
+
+    if (servicesSliderBreakpoint.matches && !servicesSwiper) {
+      servicesSlider.classList.add("swiper");
+      servicesSwiper = new Swiper(servicesSlider, {
+        modules: [Navigation, Pagination],
+        slidesPerView: 1,
+        loop: true,
+        speed: 0,
+        navigation: {
+          prevEl: ".services-slider .left-arrow",
+          nextEl: ".services-slider .right-arrow",
+        },
+        pagination: {
+          el: ".services-slider .slider-nav",
+          clickable: true,
+          bulletElement: "span",
+          renderBullet: (index, className) => `<span class="${className}">${index + 1}</span>`,
+        },
+      });
+      return;
+    }
+
+    if (!servicesSliderBreakpoint.matches && servicesSwiper) {
+      servicesSwiper.destroy(true, true);
+      servicesSwiper = null;
+      servicesSlider.classList.remove("swiper");
+    }
+  };
+
+  servicesSliderBreakpoint.addEventListener("change", syncServicesSlider);
+  syncServicesSlider();
 
   $("form").on("submit", (event) => {
     event.preventDefault();
