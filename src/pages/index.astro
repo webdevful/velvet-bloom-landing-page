@@ -1,6 +1,7 @@
 ---
 import "../styles/velvet-bloom.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import "swiper/css";
 
 const logo = "/logo.png";
 const heroImg = "/assets/img/hero-face.jpg";
@@ -144,10 +145,10 @@ const reviews = [
         <div class="container">
           <div class="hero-block-wrapp">
             <div class="hero-block-left">
-              <h1>Feel <span class="italic">renewed</span> and <span class="italic">beautiful</span> with Velvet Bloom</h1>
+              <h1>Feel <span class="italic">renewed</span> and <span class="italic">beautiful</span> at Velvet Bloom</h1>
             </div>
             <img src={heroImg} alt="Beauty treatment" class="hero-block-image" width="670" height="589" loading="eager" />
-            <p class="hero-subhead">Our salon is designed for quiet renewal, polished care, and small moments that help you feel beautifully restored.</p>
+            <p class="hero-subhead">Calm renewal, polished care, and a softly restored glow.</p>
             <div class="hero-block-button">
               <a href="#" data-open-popup class="button">
                 <span>Book a visit</span>
@@ -178,10 +179,10 @@ const reviews = [
             ))}
           </div>
 
-          <div class="services-slider" aria-label="Services carousel">
-            <div class="services-mask">
+          <div class="services-slider swiper" aria-label="Services carousel">
+            <div class="services-mask swiper-wrapper">
               {services.map((service, index) => (
-                <div class="services-slide" aria-label={`${index + 1} of ${services.length}`}>
+                <div class="services-slide swiper-slide" aria-label={`${index + 1} of ${services.length}`}>
                   <a href={`#${service.id}`}>
                     <div class="services-item">
                       <div class="services-item-left">
@@ -199,9 +200,7 @@ const reviews = [
             </div>
             <button class="left-arrow" type="button" aria-label="Previous service"><span class="arrow left" aria-hidden="true"></span></button>
             <button class="right-arrow" type="button" aria-label="Next service"><span class="arrow" aria-hidden="true"></span></button>
-            <div class="slider-nav" aria-hidden="true">
-              {services.map((_, index) => <span class={index === 0 ? "active" : ""}>{index + 1}</span>)}
-            </div>
+            <div class="slider-nav" aria-hidden="true"></div>
           </div>
         </div>
       </section>

@@ -1,0 +1,486 @@
+{
+  "original": {
+    "desktop": {
+      "heroSection": {
+        "rect": {
+          "top": 187,
+          "bottom": 802,
+          "left": 0,
+          "width": 1440,
+          "height": 615
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      },
+      "heroWrap": {
+        "rect": {
+          "top": 187,
+          "bottom": 652,
+          "left": 25,
+          "width": 1390,
+          "height": 465
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      },
+      "heroHeading": {
+        "rect": {
+          "top": 267,
+          "bottom": 460,
+          "left": 25,
+          "width": 1028.25,
+          "height": 193
+        },
+        "styles": {
+          "fontSize": "96px",
+          "lineHeight": "96px"
+        }
+      },
+      "heroImage": {
+        "rect": {
+          "top": 187,
+          "bottom": 776,
+          "left": 745,
+          "width": 670,
+          "height": 589
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      },
+      "heroSubhead": {
+        "rect": {
+          "top": 504,
+          "bottom": 540,
+          "left": 25,
+          "width": 666.44,
+          "height": 36
+        },
+        "styles": {
+          "fontSize": "24px",
+          "lineHeight": "36px"
+        }
+      },
+      "heroButton": {
+        "rect": {
+          "top": 591,
+          "bottom": 652,
+          "left": 25,
+          "width": 1390,
+          "height": 61
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      }
+    },
+    "tablet": {
+      "heroSection": {
+        "rect": {
+          "top": 133,
+          "bottom": 781,
+          "left": 0,
+          "width": 991,
+          "height": 648
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      },
+      "heroWrap": {
+        "rect": {
+          "top": 133,
+          "bottom": 781,
+          "left": 40,
+          "width": 911,
+          "height": 648
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      },
+      "heroHeading": {
+        "rect": {
+          "top": 153,
+          "bottom": 202,
+          "left": 40,
+          "width": 762.92,
+          "height": 49
+        },
+        "styles": {
+          "fontSize": "48px",
+          "lineHeight": "48px"
+        }
+      },
+      "heroImage": {
+        "rect": {
+          "top": 252,
+          "bottom": 602,
+          "left": 40,
+          "width": 911,
+          "height": 350
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      },
+      "heroSubhead": {
+        "rect": {
+          "top": 627,
+          "bottom": 663,
+          "left": 40,
+          "width": 666.44,
+          "height": 36
+        },
+        "styles": {
+          "fontSize": "24px",
+          "lineHeight": "36px"
+        }
+      },
+      "heroButton": {
+        "rect": {
+          "top": 720,
+          "bottom": 781,
+          "left": 40,
+          "width": 911,
+          "height": 61
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      }
+    },
+    "mobile": {
+      "heroSection": {
+        "rect": {
+          "top": 133,
+          "bottom": 864,
+          "left": 0,
+          "width": 390,
+          "height": 731
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      },
+      "heroWrap": {
+        "rect": {
+          "top": 133,
+          "bottom": 864,
+          "left": 24,
+          "width": 342,
+          "height": 731
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      },
+      "heroHeading": {
+        "rect": {
+          "top": 153,
+          "bottom": 299,
+          "left": 24,
+          "width": 342,
+          "height": 146
+        },
+        "styles": {
+          "fontSize": "48px",
+          "lineHeight": "48px"
+        }
+      },
+      "heroImage": {
+        "rect": {
+          "top": 349,
+          "bottom": 649,
+          "left": 24,
+          "width": 342,
+          "height": 300
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      },
+      "heroSubhead": {
+        "rect": {
+          "top": 674,
+          "bottom": 746,
+          "left": 24,
+          "width": 342,
+          "height": 72
+        },
+        "styles": {
+          "fontSize": "24px",
+          "lineHeight": "36px"
+        }
+      },
+      "heroButton": {
+        "rect": {
+          "top": 803,
+          "bottom": 864,
+          "left": 24,
+          "width": 342,
+          "height": 61
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      }
+    }
+  },
+  "preview-after-final": {
+    "desktop": {
+      "heroSection": {
+        "rect": {
+          "top": 187,
+          "bottom": 802,
+          "left": 0,
+          "width": 1440,
+          "height": 615
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      },
+      "heroWrap": {
+        "rect": {
+          "top": 187,
+          "bottom": 652,
+          "left": 25,
+          "width": 1390,
+          "height": 465
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      },
+      "heroHeading": {
+        "rect": {
+          "top": 267,
+          "bottom": 460,
+          "left": 25,
+          "width": 1028.25,
+          "height": 193
+        },
+        "styles": {
+          "fontSize": "96px",
+          "lineHeight": "96px"
+        }
+      },
+      "heroImage": {
+        "rect": {
+          "top": 187,
+          "bottom": 776,
+          "left": 745,
+          "width": 670,
+          "height": 589
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      },
+      "heroSubhead": {
+        "rect": {
+          "top": 504,
+          "bottom": 540,
+          "left": 25,
+          "width": 1390,
+          "height": 36
+        },
+        "styles": {
+          "fontSize": "24px",
+          "lineHeight": "36px"
+        }
+      },
+      "heroButton": {
+        "rect": {
+          "top": 591,
+          "bottom": 652,
+          "left": 25,
+          "width": 1390,
+          "height": 61
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      }
+    },
+    "tablet": {
+      "heroSection": {
+        "rect": {
+          "top": 103,
+          "bottom": 781,
+          "left": 0,
+          "width": 991,
+          "height": 678
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      },
+      "heroWrap": {
+        "rect": {
+          "top": 133,
+          "bottom": 781,
+          "left": 40,
+          "width": 911,
+          "height": 648
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      },
+      "heroHeading": {
+        "rect": {
+          "top": 153,
+          "bottom": 202,
+          "left": 40,
+          "width": 787.11,
+          "height": 49
+        },
+        "styles": {
+          "fontSize": "48px",
+          "lineHeight": "48px"
+        }
+      },
+      "heroImage": {
+        "rect": {
+          "top": 252,
+          "bottom": 602,
+          "left": 40,
+          "width": 911,
+          "height": 350
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      },
+      "heroSubhead": {
+        "rect": {
+          "top": 627,
+          "bottom": 663,
+          "left": 40,
+          "width": 911,
+          "height": 36
+        },
+        "styles": {
+          "fontSize": "24px",
+          "lineHeight": "36px"
+        }
+      },
+      "heroButton": {
+        "rect": {
+          "top": 720,
+          "bottom": 781,
+          "left": 40,
+          "width": 911,
+          "height": 61
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      }
+    },
+    "mobile": {
+      "heroSection": {
+        "rect": {
+          "top": 103,
+          "bottom": 864,
+          "left": 0,
+          "width": 390,
+          "height": 761
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      },
+      "heroWrap": {
+        "rect": {
+          "top": 133,
+          "bottom": 864,
+          "left": 24,
+          "width": 342,
+          "height": 731
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      },
+      "heroHeading": {
+        "rect": {
+          "top": 153,
+          "bottom": 299,
+          "left": 24,
+          "width": 342,
+          "height": 146
+        },
+        "styles": {
+          "fontSize": "48px",
+          "lineHeight": "48px"
+        }
+      },
+      "heroImage": {
+        "rect": {
+          "top": 349,
+          "bottom": 649,
+          "left": 24,
+          "width": 342,
+          "height": 300
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      },
+      "heroSubhead": {
+        "rect": {
+          "top": 674,
+          "bottom": 746,
+          "left": 24,
+          "width": 342,
+          "height": 72
+        },
+        "styles": {
+          "fontSize": "24px",
+          "lineHeight": "36px"
+        }
+      },
+      "heroButton": {
+        "rect": {
+          "top": 803,
+          "bottom": 864,
+          "left": 24,
+          "width": 342,
+          "height": 61
+        },
+        "styles": {
+          "fontSize": "16px",
+          "lineHeight": "19px"
+        }
+      }
+    }
+  }
+}

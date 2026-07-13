@@ -1,4 +1,6 @@
 import $ from "jquery";
+import Swiper from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
 
 window.jQuery = $;
 window.$ = $;
@@ -80,20 +82,24 @@ $(() => {
     }
   });
 
-  const $slides = $(".services-slide");
-  const $dots = $(".slider-nav span");
-  let activeSlide = 0;
-
-  const showSlide = (index) => {
-    if (!$slides.length) return;
-    activeSlide = (index + $slides.length) % $slides.length;
-    $slides.removeClass("active").eq(activeSlide).addClass("active");
-    $dots.removeClass("active").eq(activeSlide).addClass("active");
-  };
-
-  $(".left-arrow").on("click", () => showSlide(activeSlide - 1));
-  $(".right-arrow").on("click", () => showSlide(activeSlide + 1));
-  showSlide(0);
+  if ($(".services-slider").length) {
+    new Swiper(".services-slider", {
+      modules: [Navigation, Pagination],
+      slidesPerView: 1,
+      loop: true,
+      speed: 0,
+      navigation: {
+        prevEl: ".services-slider .left-arrow",
+        nextEl: ".services-slider .right-arrow",
+      },
+      pagination: {
+        el: ".services-slider .slider-nav",
+        clickable: true,
+        bulletElement: "span",
+        renderBullet: (index, className) => `<span class="${className}">${index + 1}</span>`,
+      },
+    });
+  }
 
   $("form").on("submit", (event) => {
     event.preventDefault();
