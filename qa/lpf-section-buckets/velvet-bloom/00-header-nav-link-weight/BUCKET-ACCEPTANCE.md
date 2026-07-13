@@ -2,7 +2,7 @@
 
 Ticket id: LPL-SECTION-REPAIR-2026-07-13-VELVET-BLOOM-00-HEADER-NAV-LINK-WEIGHT
 Bucket id: 00-header-nav-link-weight
-Status: pass locally, pending public release verification
+Status: pass, public release verified
 
 ## Defect
 
@@ -52,7 +52,9 @@ No layout, logo, hero, section, JavaScript, image, or catalog record was changed
 - Current-after local header screenshot: `currentAfterLocal-desktop-header.png`
 - Current-after local mobile closed: `currentAfterLocal-mobile-closed.png`
 - Current-after local mobile open: `currentAfterLocal-mobile-open.png`
+- Public-after deployed desktop header: `public-after-deploy-desktop-header.png`
 - Metrics: `header-nav-link-weight-metrics.json`
+- Public-after deployed metrics: `public-after-deploy-metrics.json`
 
 Key metric for `Services`:
 
@@ -82,6 +84,9 @@ Key metric for `Services`:
 - Product `npm run build`: pass
 - Local Playwright source/current-after computed-style comparison: pass
 - Local mobile menu open/closed screenshot regression: pass
+- Product Cloudflare deployment: pass, `https://81186d1c.velvet-bloom-landing-page.pages.dev`
+- Public Playwright computed-style verification: pass, canonical URL with cache bust reports `Cormorant`, `16px`, `19px`, `700`, `#222`, and `-webkit-font-smoothing: auto`
+- Public rendered-output slider regression: pass, Swiper visited `4/4` slides on desktop, tablet, and mobile
 
 ## Codify-Back
 
