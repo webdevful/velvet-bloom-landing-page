@@ -4,7 +4,7 @@ Ticket: `LPF_REPAIR-velvet-bloom-02-our-services-2026-07-13`
 
 Return: `01-frame-contour`
 
-Status: `local-pass / public-release-pending`
+Status: `pass / owner-review`
 
 ## Owner return
 
@@ -48,6 +48,10 @@ Owner evidence:
 - `original-{desktop,tablet,mobile}.png`
 - `return-before-{desktop,tablet,mobile}.png`
 - `return-after-{desktop,tablet,mobile}.png`
+- `public-after-frame.png`
+- `public-after-return-{desktop,tablet,mobile}.png`
+- `rendered-public/`
+- `funnel-public/`
 
 ## Acceptance
 
@@ -57,7 +61,7 @@ Owner evidence:
 - [x] Transparent spacing between the two contours matches the source pattern.
 - [x] Desktop and mobile screenshots visibly differ from the returned build.
 - [x] Build, design lint, source-design, and local rendered-output gates pass.
-- [ ] Public deployment and storefront funnel verified.
+- [x] Public deployment and storefront funnel verified.
 
 Defect class: `visual-slot / transparent-composite-flattened-to-css-ellipse`.
 
@@ -72,6 +76,14 @@ Defect class: `visual-slot / transparent-composite-flattened-to-css-ellipse`.
 - Structural visual diff improved from the returned pass's band/SSIM
   `0.82 / 0.71` to `0.87 / 0.80`.
 - Rendered output: desktop has zero Swipers; tablet/mobile visit `4/4` slides.
+- Public frame inspection: `border-radius: 0px`, `box-shadow: none`, one
+  source-measured clip path, and one independent outline path.
+- Product PR: `https://github.com/webdevful/velvet-bloom-landing-page/pull/10`.
+- Product merge: `d1d40f6d38e68cee9fc71e63c9ea3423839fbe4a`.
+- Cloudflare immutable deployment:
+  `https://f550d2a2.velvet-bloom-landing-page.pages.dev`.
+- Stable deployment: `https://velvet-bloom-landing-page.pages.dev/`.
+- Storefront funnel: PASS; hero/preview parity MAE `0.02`, RMS `0.79`.
 
 Codify-back: source-design checks now forbid the false radius/shadow treatment
 and require the organic clip-path plus independent outline layer. The return

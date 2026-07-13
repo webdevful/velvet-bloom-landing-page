@@ -26,7 +26,7 @@
   },
   "public-before": {
     "url": "https://velvet-bloom-landing-page.pages.dev/?return=frame-before",
-    "frameMarkup": "<div class=\"services-item-right\"><img src=\"/assets/img/service-cosmetology.jpg\" alt=\"Cosmetology\" class=\"image\" width=\"300\" height=\"340\" loading=\"lazy\"></div>",
+    "frameMarkup": "<div class=\"services-item-right\"><div class=\"service-image-frame service-image-frame-cosmetology\" style=\"--service-frame-width: 405; --service-frame-height: 457; --service-photo-mask: url(#service-photo-mask-cosmetology-grid);\"><svg class=\"service-image-defs\" width=\"0\" height=\"0\" aria-hidden=\"true\" focusable=\"false\"><defs><clipPath id=\"service-photo-mask-cosmetology-grid\" clipPathUnits=\"objectBoundingBox\"><path d=\"M 0.62963 0.04376 C 0.57572 0.03465 0.51564 0.03866 0.46173 0.05252 C 0.40782 0.06637 0.35350 0.09227 0.30617 0.12691 C 0.25885 0.16156 0.21152 0.21043 0.17778 0.26039 C 0.14403 0.31036 0.11852 0.37090 0.10370 0.42670 C 0.08889 0.48249 0.08313 0.53866 0.08889 0.59519 C 0.09465 0.65171 0.11276 0.71663 0.13827 0.76586 C 0.16379 0.81510 0.19959 0.85813 0.24198 0.89059 C 0.28436 0.92305 0.34198 0.94858 0.39259 0.96061 C 0.44321 0.97265 0.49095 0.97447 0.54568 0.96280 C 0.60041 0.95113 0.66872 0.92560 0.72099 0.89059 C 0.77325 0.85558 0.82305 0.80525 0.85926 0.75274 C 0.89547 0.70022 0.92346 0.63713 0.93827 0.57549 C 0.95309 0.51386 0.95638 0.44238 0.94815 0.38293 C 0.93992 0.32349 0.91605 0.26477 0.88889 0.21882 C 0.86173 0.17287 0.82840 0.13640 0.78519 0.10722 C 0.74198 0.07805 0.68354 0.05288 0.62963 0.04376 Z\"></path></clipPath></defs></svg><img src=\"/assets/img/service-cosmetology.jpg\" alt=\"Cosmetology\" class=\"image\" width=\"405\" height=\"457\" loading=\"lazy\"><svg class=\"service-image-outline\" viewBox=\"0 0 405 457\" preserveAspectRatio=\"none\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M 293 12 C 269.83 3 245.5 0.83 220 4 C 194.5 7.17 163.5 18.33 140 31 C 116.5 43.67 97.83 58.5 79 80 C 60.17 101.5 39.33 133.17 27 160 C 14.67 186.83 7.67 213.17 5 241 C 2.33 268.83 4.33 301.33 11 327 C 17.67 352.67 29.33 376.17 45 395 C 60.67 413.83 81.5 430.67 105 440 C 128.5 449.33 159 453.67 186 451 C 213 448.33 242.5 437.83 267 424 C 291.5 410.17 314.5 389.17 333 368 C 351.5 346.83 366.67 323 378 297 C 389.33 271 398.33 240.67 401 212 C 403.67 183.33 401 150.67 394 125 C 387 99.33 375.83 76.83 359 58 C 342.17 39.17 316.17 21 293 12 Z\"></path></svg></div></div>",
     "image": {
       "currentSrc": "https://velvet-bloom-landing-page.pages.dev/assets/img/service-cosmetology.jpg",
       "naturalWidth": 640,
@@ -35,25 +35,50 @@
         "x": 598,
         "y": 306,
         "width": 398,
-        "height": 449
+        "height": 449.09375
       },
-      "borderRadius": "50%",
-      "boxShadow": "rgb(253, 250, 247) 0px 0px 0px 9px, rgba(0, 0, 0, 0.12) 0px 0px 0px 10px",
-      "clipPath": "none",
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "clipPath": "url(\"#service-photo-mask-cosmetology-grid\")",
       "objectFit": "cover"
     },
     "contourLayers": {
-      "clipPaths": 0,
-      "maskPathLength": 0,
-      "independentOutlines": 0,
-      "outlinePathLength": 0
+      "clipPaths": 1,
+      "maskPathLength": 819,
+      "independentOutlines": 1,
+      "outlinePathLength": 543
     }
   },
   "local-after": {
     "url": "http://127.0.0.1:4441/",
-    "frameMarkup": "<div class=\"services-item-right\"><div class=\"service-image-frame service-image-frame-cosmetology\" style=\"--service-frame-width: 405; --service-frame-height: 457;\"><svg class=\"service-image-defs\" width=\"0\" height=\"0\" aria-hidden=\"true\" focusable=\"false\"><defs><clipPath id=\"service-photo-mask-cosmetology-grid\" clipPathUnits=\"objectBoundingBox\"><path d=\"M 0.62963 0.04376 C 0.57572 0.03465 0.51564 0.03866 0.46173 0.05252 C 0.40782 0.06637 0.35350 0.09227 0.30617 0.12691 C 0.25885 0.16156 0.21152 0.21043 0.17778 0.26039 C 0.14403 0.31036 0.11852 0.37090 0.10370 0.42670 C 0.08889 0.48249 0.08313 0.53866 0.08889 0.59519 C 0.09465 0.65171 0.11276 0.71663 0.13827 0.76586 C 0.16379 0.81510 0.19959 0.85813 0.24198 0.89059 C 0.28436 0.92305 0.34198 0.94858 0.39259 0.96061 C 0.44321 0.97265 0.49095 0.97447 0.54568 0.96280 C 0.60041 0.95113 0.66872 0.92560 0.72099 0.89059 C 0.77325 0.85558 0.82305 0.80525 0.85926 0.75274 C 0.89547 0.70022 0.92346 0.63713 0.93827 0.57549 C 0.95309 0.51386 0.95638 0.44238 0.94815 0.38293 C 0.93992 0.32349 0.91605 0.26477 0.88889 0.21882 C 0.86173 0.17287 0.82840 0.13640 0.78519 0.10722 C 0.74198 0.07805 0.68354 0.05288 0.62963 0.04376 Z\"></path></clipPath></defs></svg><img src=\"/assets/img/service-cosmetology.jpg\" alt=\"Cosmetology\" class=\"image\" width=\"405\" height=\"457\" loading=\"lazy\" style=\"clip-path: url(#service-photo-mask-cosmetology-grid);\"><svg class=\"service-image-outline\" viewBox=\"0 0 405 457\" preserveAspectRatio=\"none\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M 293 12 C 269.83 3 245.5 0.83 220 4 C 194.5 7.17 163.5 18.33 140 31 C 116.5 43.67 97.83 58.5 79 80 C 60.17 101.5 39.33 133.17 27 160 C 14.67 186.83 7.67 213.17 5 241 C 2.33 268.83 4.33 301.33 11 327 C 17.67 352.67 29.33 376.17 45 395 C 60.67 413.83 81.5 430.67 105 440 C 128.5 449.33 159 453.67 186 451 C 213 448.33 242.5 437.83 267 424 C 291.5 410.17 314.5 389.17 333 368 C 351.5 346.83 366.67 323 378 297 C 389.33 271 398.33 240.67 401 212 C 403.67 183.33 401 150.67 394 125 C 387 99.33 375.83 76.83 359 58 C 342.17 39.17 316.17 21 293 12 Z\"></path></svg></div></div>",
+    "frameMarkup": "<div class=\"services-item-right\"><div class=\"service-image-frame service-image-frame-cosmetology\" style=\"--service-frame-width: 405; --service-frame-height: 457; --service-photo-mask: url(#service-photo-mask-cosmetology-grid);\"><svg class=\"service-image-defs\" width=\"0\" height=\"0\" aria-hidden=\"true\" focusable=\"false\"><defs><clipPath id=\"service-photo-mask-cosmetology-grid\" clipPathUnits=\"objectBoundingBox\"><path d=\"M 0.62963 0.04376 C 0.57572 0.03465 0.51564 0.03866 0.46173 0.05252 C 0.40782 0.06637 0.35350 0.09227 0.30617 0.12691 C 0.25885 0.16156 0.21152 0.21043 0.17778 0.26039 C 0.14403 0.31036 0.11852 0.37090 0.10370 0.42670 C 0.08889 0.48249 0.08313 0.53866 0.08889 0.59519 C 0.09465 0.65171 0.11276 0.71663 0.13827 0.76586 C 0.16379 0.81510 0.19959 0.85813 0.24198 0.89059 C 0.28436 0.92305 0.34198 0.94858 0.39259 0.96061 C 0.44321 0.97265 0.49095 0.97447 0.54568 0.96280 C 0.60041 0.95113 0.66872 0.92560 0.72099 0.89059 C 0.77325 0.85558 0.82305 0.80525 0.85926 0.75274 C 0.89547 0.70022 0.92346 0.63713 0.93827 0.57549 C 0.95309 0.51386 0.95638 0.44238 0.94815 0.38293 C 0.93992 0.32349 0.91605 0.26477 0.88889 0.21882 C 0.86173 0.17287 0.82840 0.13640 0.78519 0.10722 C 0.74198 0.07805 0.68354 0.05288 0.62963 0.04376 Z\"></path></clipPath></defs></svg><img src=\"/assets/img/service-cosmetology.jpg\" alt=\"Cosmetology\" class=\"image\" width=\"405\" height=\"457\" loading=\"lazy\"><svg class=\"service-image-outline\" viewBox=\"0 0 405 457\" preserveAspectRatio=\"none\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M 293 12 C 269.83 3 245.5 0.83 220 4 C 194.5 7.17 163.5 18.33 140 31 C 116.5 43.67 97.83 58.5 79 80 C 60.17 101.5 39.33 133.17 27 160 C 14.67 186.83 7.67 213.17 5 241 C 2.33 268.83 4.33 301.33 11 327 C 17.67 352.67 29.33 376.17 45 395 C 60.67 413.83 81.5 430.67 105 440 C 128.5 449.33 159 453.67 186 451 C 213 448.33 242.5 437.83 267 424 C 291.5 410.17 314.5 389.17 333 368 C 351.5 346.83 366.67 323 378 297 C 389.33 271 398.33 240.67 401 212 C 403.67 183.33 401 150.67 394 125 C 387 99.33 375.83 76.83 359 58 C 342.17 39.17 316.17 21 293 12 Z\"></path></svg></div></div>",
     "image": {
       "currentSrc": "http://127.0.0.1:4441/assets/img/service-cosmetology.jpg",
+      "naturalWidth": 640,
+      "naturalHeight": 427,
+      "rect": {
+        "x": 598,
+        "y": 306,
+        "width": 398,
+        "height": 449.09375
+      },
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "clipPath": "url(\"#service-photo-mask-cosmetology-grid\")",
+      "objectFit": "cover"
+    },
+    "contourLayers": {
+      "clipPaths": 1,
+      "maskPathLength": 819,
+      "independentOutlines": 1,
+      "outlinePathLength": 543
+    }
+  },
+  "public-after": {
+    "url": "https://velvet-bloom-landing-page.pages.dev/?return=frame-after-d1d40f6d",
+    "frameMarkup": "<div class=\"services-item-right\"><div class=\"service-image-frame service-image-frame-cosmetology\" style=\"--service-frame-width: 405; --service-frame-height: 457; --service-photo-mask: url(#service-photo-mask-cosmetology-grid);\"><svg class=\"service-image-defs\" width=\"0\" height=\"0\" aria-hidden=\"true\" focusable=\"false\"><defs><clipPath id=\"service-photo-mask-cosmetology-grid\" clipPathUnits=\"objectBoundingBox\"><path d=\"M 0.62963 0.04376 C 0.57572 0.03465 0.51564 0.03866 0.46173 0.05252 C 0.40782 0.06637 0.35350 0.09227 0.30617 0.12691 C 0.25885 0.16156 0.21152 0.21043 0.17778 0.26039 C 0.14403 0.31036 0.11852 0.37090 0.10370 0.42670 C 0.08889 0.48249 0.08313 0.53866 0.08889 0.59519 C 0.09465 0.65171 0.11276 0.71663 0.13827 0.76586 C 0.16379 0.81510 0.19959 0.85813 0.24198 0.89059 C 0.28436 0.92305 0.34198 0.94858 0.39259 0.96061 C 0.44321 0.97265 0.49095 0.97447 0.54568 0.96280 C 0.60041 0.95113 0.66872 0.92560 0.72099 0.89059 C 0.77325 0.85558 0.82305 0.80525 0.85926 0.75274 C 0.89547 0.70022 0.92346 0.63713 0.93827 0.57549 C 0.95309 0.51386 0.95638 0.44238 0.94815 0.38293 C 0.93992 0.32349 0.91605 0.26477 0.88889 0.21882 C 0.86173 0.17287 0.82840 0.13640 0.78519 0.10722 C 0.74198 0.07805 0.68354 0.05288 0.62963 0.04376 Z\"></path></clipPath></defs></svg><img src=\"/assets/img/service-cosmetology.jpg\" alt=\"Cosmetology\" class=\"image\" width=\"405\" height=\"457\" loading=\"lazy\"><svg class=\"service-image-outline\" viewBox=\"0 0 405 457\" preserveAspectRatio=\"none\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M 293 12 C 269.83 3 245.5 0.83 220 4 C 194.5 7.17 163.5 18.33 140 31 C 116.5 43.67 97.83 58.5 79 80 C 60.17 101.5 39.33 133.17 27 160 C 14.67 186.83 7.67 213.17 5 241 C 2.33 268.83 4.33 301.33 11 327 C 17.67 352.67 29.33 376.17 45 395 C 60.67 413.83 81.5 430.67 105 440 C 128.5 449.33 159 453.67 186 451 C 213 448.33 242.5 437.83 267 424 C 291.5 410.17 314.5 389.17 333 368 C 351.5 346.83 366.67 323 378 297 C 389.33 271 398.33 240.67 401 212 C 403.67 183.33 401 150.67 394 125 C 387 99.33 375.83 76.83 359 58 C 342.17 39.17 316.17 21 293 12 Z\"></path></svg></div></div>",
+    "image": {
+      "currentSrc": "https://velvet-bloom-landing-page.pages.dev/assets/img/service-cosmetology.jpg",
       "naturalWidth": 640,
       "naturalHeight": 427,
       "rect": {

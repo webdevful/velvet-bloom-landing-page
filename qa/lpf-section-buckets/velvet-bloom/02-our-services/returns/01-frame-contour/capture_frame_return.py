@@ -14,6 +14,7 @@ TARGETS = {
     "source": "https://magnolia-template.webflow.io/",
     "public-before": "https://velvet-bloom-landing-page.pages.dev/?return=frame-before",
     "local-after": "http://127.0.0.1:4441/",
+    "public-after": "https://velvet-bloom-landing-page.pages.dev/?return=frame-after-d1d40f6d",
 }
 
 
