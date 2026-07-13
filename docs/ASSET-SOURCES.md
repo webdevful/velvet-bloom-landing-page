@@ -41,12 +41,18 @@ license note, local path, and downloaded width.
 
 ### Replacement shape contract
 
-- Source format: the approved Pexels replacements are local JPEG photographs;
-  they have no alpha channel or transparency.
+- Source format: Magnolia's service visuals are transparent WebP composites;
+  each file bakes an irregular photograph alpha edge, transparent spacing, and
+  a separate differently shaped outer hairline into one raster. The approved
+  Pexels replacements remain local JPEG photographs with no source alpha, so
+  the equivalent two-contour transparency is applied at render time by the
+  `ServiceImageFrame.astro` clip-path and independent outline layers.
 - Dimensions and aspect ratio: source files retain their downloaded pixel
   dimensions. In the Our Services section, CSS usage renders each photograph
   at 398 × 449px on desktop and 233 × 263px on mobile, an aspect ratio of
-  `398 / 449`, with `object-fit: cover` inside the source-shaped oval.
+  `398 / 449`, with `object-fit: cover` inside the source-measured organic
+  contour. Per-service frame ratios preserve the source composites at
+  `405×457`, `406×458`, `405×452`, and `405×454`.
 - Section context and content relevance: the four service slots use distinct
   cosmetology, massage, manicure, and makeup photographs that directly match
   each card's service topic.
@@ -55,10 +61,12 @@ license note, local path, and downloaded width.
   responsive representation of the same content, not as new decorative slots.
 - Slider media dimensions: mobile service slider media render at 233 × 263px;
   tablet and desktop sizing follows the same CSS aspect-ratio contract.
-- Replacement contract: preserve local provider-backed media, the oval slot
-  geometry, rendered width and rendered height, and content-role mapping. Do
-  not copy source media or substitute generated, transparent, cutout, logo, or
-  interface artwork into these photo slots.
+- Replacement contract: preserve local provider-backed media, the independent
+  inner and outer contours, transparent inter-contour spacing, rendered width
+  and rendered height, and content-role mapping. A regular
+  `border-radius: 50%` ellipse or concentric box-shadow ring is not
+  source-compatible. Do not copy source media or substitute generated, cutout,
+  logo, or interface artwork into these photo slots.
 
 ## Standards Of Care Icons
 

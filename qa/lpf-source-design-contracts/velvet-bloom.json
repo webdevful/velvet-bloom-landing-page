@@ -2,7 +2,7 @@
   "slug": "velvet-bloom",
   "sourceUrl": "https://magnolia-template.webflow.io/",
   "sourceLabel": "Magnolia (Webflow hosted template)",
-  "description": "Measured Magnolia-to-Velvet Bloom source-design contract. Section 2 checks pin the source 2x2 service grid, card split, oval photo geometry, typography rhythm, and desktop-only grid/mobile-only slider topology.",
+  "description": "Measured Magnolia-to-Velvet Bloom source-design contract. Section 2 checks pin the source 2x2 service grid, card split, transparent organic two-contour photo geometry, typography rhythm, and desktop-only grid/mobile-only slider topology.",
   "checks": [
     {
       "id": "services-desktop-grid",
@@ -46,10 +46,42 @@
     },
     {
       "id": "services-photo-aspect",
-      "description": "Local service photos keep the measured source oval proportion near 398x449.",
+      "description": "Local service photos keep the measured source composite proportion near 398x449.",
       "selector": ".image",
       "property": "aspect-ratio",
       "expected": "398 / 449",
+      "severity": "error"
+    },
+    {
+      "id": "services-photo-not-regular-ellipse",
+      "description": "The source does not use border-radius for the service photo contour; the organic alpha contour must remain independently clipped.",
+      "selector": ".image",
+      "property": "border-radius",
+      "expected": "0",
+      "severity": "error"
+    },
+    {
+      "id": "services-photo-no-concentric-shadow",
+      "description": "The source outer hairline is not a concentric box-shadow ring.",
+      "selector": ".image",
+      "property": "box-shadow",
+      "expected": "none",
+      "severity": "error"
+    },
+    {
+      "id": "services-photo-organic-mask",
+      "description": "Each local service photo is clipped by its measured organic inner contour.",
+      "selector": ".image",
+      "property": "clip-path",
+      "expected": "var(--service-photo-mask)",
+      "severity": "error"
+    },
+    {
+      "id": "services-outline-independent-layer",
+      "description": "The differently shaped outer hairline remains an independent scalable layer over the photo mask.",
+      "selector": ".service-image-outline",
+      "property": "position",
+      "expected": "absolute",
       "severity": "error"
     },
     {

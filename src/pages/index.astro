@@ -2,6 +2,7 @@
 import "../styles/velvet-bloom.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "swiper/css";
+import ServiceImageFrame from "../components/ServiceImageFrame.astro";
 
 const logo = "/logo.png";
 const heroImg = "/assets/img/hero-face.jpg";
@@ -172,7 +173,7 @@ const reviews = [
                     <div class="services-link"><span class="arrow small" aria-hidden="true"></span></div>
                   </div>
                   <div class="services-item-right">
-                    <img src={service.img} alt={service.name} class="image" width="300" height="340" loading="lazy" />
+                    <ServiceImageFrame serviceId={service.id} instance="grid" src={service.img} alt={service.name} />
                   </div>
                 </div>
               </a>
@@ -191,7 +192,7 @@ const reviews = [
                         <div class="services-link"><span class="arrow small" aria-hidden="true"></span></div>
                       </div>
                       <div class="services-item-right">
-                        <img src={service.img} alt={service.name} class="image" loading="lazy" />
+                        <ServiceImageFrame serviceId={service.id} instance="slider" src={service.img} alt={service.name} />
                       </div>
                     </div>
                   </a>
