@@ -1,0 +1,25 @@
+---
+import { BadgeCheck, Droplet, Sofa, Sparkles } from "@lucide/astro";
+
+interface Props {
+  role: "hygiene" | "expertise" | "comfort";
+}
+
+const { role } = Astro.props;
+---
+
+<span class={`standard-care-icon standard-care-icon-${role}`} aria-hidden="true">
+  {role === "hygiene" && (
+    <>
+      <Droplet class="standard-care-icon-main" strokeWidth={1.6} />
+      <Sparkles class="standard-care-icon-sparkles" strokeWidth={1.6} />
+    </>
+  )}
+  {role === "expertise" && <BadgeCheck class="standard-care-icon-main" strokeWidth={1.6} />}
+  {role === "comfort" && (
+    <>
+      <Sofa class="standard-care-icon-main" strokeWidth={1.6} />
+      <Sparkles class="standard-care-icon-sparkles" strokeWidth={1.6} />
+    </>
+  )}
+</span>

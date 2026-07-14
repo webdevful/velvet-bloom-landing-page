@@ -86,24 +86,37 @@ license note, local path, and downloaded width.
 
 ## Standards Of Care Icons
 
-The Standards of care section uses local Font Awesome Free icons from the
-product dependency `@fortawesome/fontawesome-free` version `^7.3.0`.
+The Standards of care section uses Lucide's outlined Astro components from the
+approved product dependency `@lucide/astro` version `^1.24.0`.
 
 Icon mapping:
 
-- Hygiene / eco care: `fa-solid fa-seedling`
-- Certified specialist / quality: `fa-solid fa-award`
-- Comfort / spa atmosphere: `fa-solid fa-spa`
+- Hygiene / eco care: outlined `Droplet` plus `Sparkles`
+- Certified specialist / quality: outlined `BadgeCheck`
+- Comfort / spa atmosphere: outlined `Sofa` plus `Sparkles`
 
 Usage:
 
-- Imported in `src/pages/index.astro` from
-  `@fortawesome/fontawesome-free/css/all.min.css`.
-- Rendered as `<i>` elements in the Standards of care section.
+- Imported by `src/components/StandardCareIcon.astro` from `@lucide/astro`.
+- Rendered as route-local inline Lucide SVG components in the Standards of care
+  section.
 - CSS controls only the section layout, icon size, color, and positioning; it
   does not draw or invent the icon artwork.
 
 License:
 
-- Font Awesome Free package license as distributed by npm. These icons replace
-  the source SVG icon roles without copying source-hosted SVG files.
+- Lucide package license as distributed by npm. These outlined icons replace
+  the source SVG icon roles without copying source-hosted SVG files. Lucide was
+  selected because the previous locally installed Font Awesome solid glyphs
+  could not preserve the source's outlined hygiene/certification/comfort visual
+  family.
+
+## Standards Of Care Decorative Outline
+
+- Source role: one independent pale hairline contour behind each peach icon
+  disk, with transparent separation and per-card rotation/offset.
+- Final mechanism: route CSS renders a separate irregular border layer at the
+  source-measured 212×225 aspect family; it remains independent of the inner
+  disk and icon components and uses no copied source SVG.
+- Contract: the outline must remain non-concentric, differently offset per
+  card, behind the disk, unclipped, and visually subordinate at `#f8e8da`.

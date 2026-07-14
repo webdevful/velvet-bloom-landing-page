@@ -1,0 +1,90 @@
+{
+  "slug": "velvet-bloom",
+  "source": "/Volumes/WDF-NAS-01/04-Projects/Internal-Projects/Codebases/worktrees/velvet-bloom-standards-ticket/captures/magnolia-template-webflow-io/desktop/page.html",
+  "output": "/Volumes/WDF-NAS-01/02-Webdevful-Factory/05-Production-Department/Product-Lines/Landing-Page-Line/01-Product-Repos/velvet-bloom/worktrees/codex-standards-section-3/dist/index.html",
+  "sections": [
+    {
+      "source": 1,
+      "output": 1,
+      "distance": 0.333,
+      "status": "fail",
+      "signature": "<section> 1\u00d7headings, 3\u00d7images, 4\u00d7form_fields"
+    },
+    {
+      "source": 2,
+      "output": 2,
+      "distance": 0.482,
+      "status": "fail",
+      "signature": "<section> 3\u00d7images, 7\u00d7links"
+    },
+    {
+      "source": 3,
+      "output": 3,
+      "distance": 0.225,
+      "status": "fail",
+      "signature": "<section> 1\u00d7headings, 2\u00d7images, 1\u00d7links"
+    },
+    {
+      "source": 4,
+      "output": 4,
+      "distance": 0.153,
+      "status": "fail",
+      "signature": "<section> 1\u00d7headings, 18\u00d7images, 4\u00d7links"
+    },
+    {
+      "source": 5,
+      "output": 5,
+      "distance": 0.096,
+      "status": "ok",
+      "signature": "<section> 1\u00d7headings, 6\u00d7images"
+    },
+    {
+      "source": 6,
+      "output": 6,
+      "distance": 0.259,
+      "status": "fail",
+      "signature": "<section> 1\u00d7headings, 6\u00d7images, 1\u00d7links"
+    },
+    {
+      "source": 7,
+      "output": 7,
+      "distance": 0.394,
+      "status": "fail",
+      "signature": "<section> 1\u00d7headings, 5\u00d7images"
+    },
+    {
+      "source": 8,
+      "output": 8,
+      "distance": 0.475,
+      "status": "fail",
+      "signature": "<section> 1\u00d7headings, 15\u00d7images"
+    },
+    {
+      "source": 9,
+      "output": 9,
+      "distance": 0.47,
+      "status": "fail",
+      "signature": "<section> 1\u00d7headings, 2\u00d7images, 2\u00d7form_fields"
+    },
+    {
+      "source": 10,
+      "output": 10,
+      "distance": 0.108,
+      "status": "fail",
+      "signature": "<section> 6\u00d7images, 10\u00d7links"
+    }
+  ],
+  "advisories": [],
+  "failures": [
+    "section 1\u21921: source has 4 form_fields but the output section has none \u2014 a preserved-slot family was dropped (source: <section> 1\u00d7headings, 3\u00d7images, 4\u00d7form_fields)",
+    "section 2\u21922: element-count drift (images 3\u219224) (strict mode)",
+    "section 3\u21923: element-count drift (images 2\u21925) (strict mode)",
+    "section 4\u21924: element-count drift (images 18\u21922) (strict mode)",
+    "section 6\u21926: element-count drift (images 6\u21920) (strict mode)",
+    "section 7\u21927: element-count drift (images 5\u21921) (strict mode)",
+    "section 8\u21928: element-count drift (images 15\u21921) (strict mode)",
+    "section 9\u21929: source has 2 form_fields but the output section has none \u2014 a preserved-slot family was dropped (source: <section> 1\u00d7headings, 2\u00d7images, 2\u00d7form_fields)",
+    "section 10\u219210: element-count drift (images 6\u21921) (strict mode)"
+  ],
+  "verdict": "FAIL"
+}
