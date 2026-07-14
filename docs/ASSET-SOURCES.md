@@ -68,6 +68,22 @@ license note, local path, and downloaded width.
   source-compatible. Do not copy source media or substitute generated, cutout,
   logo, or interface artwork into these photo slots.
 
+### Pricing composite
+
+- Source slot: one transparent `547×814` WebP composite containing a full-width
+  upper photograph and a smaller photograph anchored at the bottom-right.
+- Owned reconstruction: `pricing-flatlay.jpg` supplies the upper photographic
+  slot and `popup-spa.jpg` supplies the lower photographic slot. Both are local
+  Pexels-backed files with neighboring provenance records; no source pixels are
+  shipped.
+- Render contract: `.pricng-images-wrapp` preserves the `547 / 814` canvas;
+  the upper image spans `100% × 83.8%`; the lower image spans
+  `48.8% × 29.5%` and is anchored right/bottom. This recreates the source
+  transparent silhouette with semantic image elements and approved photography.
+- Responsive contract: the composite remains beside the accordion through the
+  `768–991px` tablet layout and is removed below `768px`, matching the source
+  mobile pricing flow.
+
 ## Standards Of Care Icons
 
 The Standards of care section uses Lucide's outlined Astro components from the
