@@ -2,7 +2,7 @@
 
 Ticket: `LPL-SECTION-REPAIR-2026-07-13-VELVET-BLOOM-03-STANDARDS-SOURCE-STRUCTURE-RETURN`
 
-Status: local acceptance passed; public release evidence pending
+Status: accepted and publicly verified
 
 ## Source Comparison
 
@@ -41,5 +41,16 @@ remain outside its bounded acceptance.
 
 ## Release Proof
 
-Pending product/catalog merge, Cloudflare deployment, public responsive
-captures, and category-to-detail-to-demo funnel verification.
+- Product PR #14 merged as `68c91bde`; product deployment:
+  `https://3f9ce2bc.velvet-bloom-landing-page.pages.dev`.
+- Catalog PR #81 merged as `5d3eb8cc`; storefront deployment:
+  `https://ceb5fe1c.webdevful-astro.pages.dev`.
+- Stable product URL returned the repaired section at 1440x1100 with the same
+  493px section height, 169px disks, 69px grid gap, and 24px copy leading as
+  the source measurement. Mobile remained 924px tall at 390px.
+- Public rendered-output passed at desktop, tablet, and mobile; the services
+  slider remained interactive at tablet and mobile.
+- Browser verification passed from the Beauty & Spas category card to the
+  Velvet Bloom detail page and its `View live demo` link. The deployed demo
+  exposed the Section 3 Lucide icons and `Standards of care` heading.
+- Public funnel sync passed with MAE `0.02` and RMS `0.79`.
