@@ -10,6 +10,7 @@ outlined semantic icons, source spacing, and responsive geometry. Lucide is
 recorded as the approved icon source and the prior Font Awesome dependency was
 removed.
 
-Local validation and exact section geometry passed at desktop, tablet, and
-mobile. Public release evidence is recorded in the bucket acceptance after
-deployment.
+Local and public validation passed with exact source section geometry at
+desktop, tablet, and mobile. Product PR #14 and catalog PR #81 were merged and
+deployed. Public rendered-output and the category-to-detail-to-demo funnel
+passed; funnel visual parity remained MAE 0.02 / RMS 0.79.
