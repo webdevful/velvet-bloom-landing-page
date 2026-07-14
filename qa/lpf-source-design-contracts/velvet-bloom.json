@@ -91,6 +91,70 @@
       "property": "display",
       "expected": "none",
       "severity": "error"
+    },
+    {
+      "id": "standards-heading-source-offset",
+      "description": "The Standards heading keeps the source 20px top offset inside the section.",
+      "selector": "#Standarts h2",
+      "property": "margin-top",
+      "expected": "20px",
+      "severity": "error"
+    },
+    {
+      "id": "standards-grid-source-gutter",
+      "description": "Standards keeps the source three-column 69px gutter.",
+      "selector": ".standarts-wrapp",
+      "property": "gap",
+      "expected": "69px",
+      "severity": "error"
+    },
+    {
+      "id": "standards-grid-source-rhythm",
+      "description": "Standards keeps the source 120px heading-to-grid desktop rhythm.",
+      "selector": ".standarts-wrapp",
+      "property": "margin-top",
+      "expected": "120px",
+      "severity": "error"
+    },
+    {
+      "id": "standards-card-source-gap",
+      "description": "Each icon composition and copy block keep the source 36px separation.",
+      "selector": ".standart-item",
+      "property": "gap",
+      "expected": "36px",
+      "severity": "error"
+    },
+    {
+      "id": "standards-disk-source-size",
+      "description": "The peach icon disk keeps the source 169px desktop diameter.",
+      "selector": ".standart-image-wrapp",
+      "property": "width",
+      "expected": "169px",
+      "severity": "error"
+    },
+    {
+      "id": "standards-outline-independent-layer",
+      "description": "The decorative hairline remains a separate absolute layer behind the disk.",
+      "selector": ".service-image-absolute",
+      "property": "position",
+      "expected": "absolute",
+      "severity": "error"
+    },
+    {
+      "id": "standards-outline-not-concentric-circle",
+      "description": "The source outline is irregular and cannot regress to a regular circular ring.",
+      "selector": ".service-image-absolute",
+      "property": "border-radius",
+      "expected": "40% 60% 55% 45% / 30% 42% 58% 70%",
+      "severity": "error"
+    },
+    {
+      "id": "standards-copy-source-leading",
+      "description": "Standards copy keeps the source 24px line height at the 16px body scale.",
+      "selector": ".service-text",
+      "property": "line-height",
+      "expected": "1.5",
+      "severity": "error"
     }
   ],
   "design_tokens": {

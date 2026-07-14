@@ -447,6 +447,14 @@ h2 {
   display: none;
 }
 
+#Standarts h2 {
+  margin-top: 20px;
+}
+
+#Standarts .container {
+  display: flow-root;
+}
+
 .standarts-wrapp {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -456,6 +464,7 @@ h2 {
 
 .standart-item {
   position: relative;
+  isolation: isolate;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -472,28 +481,50 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: static;
 }
 
-.standart-icon {
-  width: 44px;
-  height: 44px;
+.standard-care-icon {
+  position: relative;
+  width: 64px;
+  height: 64px;
   z-index: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: var(--ink);
-  font-size: 40px;
-  line-height: 1;
+}
+
+.standard-care-icon-main {
+  width: 58px;
+  height: 58px;
+}
+
+.standard-care-icon-sparkles {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 2px;
+  right: -2px;
+}
+
+.standard-care-icon-comfort .standard-care-icon-main {
+  width: 62px;
+  height: 62px;
+}
+
+.standard-care-icon-comfort .standard-care-icon-sparkles {
+  top: -2px;
+  right: -4px;
 }
 
 .service-image-absolute {
-  z-index: 0;
+  z-index: -1;
   height: 200px;
   min-height: 200px;
-  width: 220px;
-  border: 1px solid rgba(248, 232, 218, .9);
-  border-radius: 50%;
+  width: 188.44px;
+  border: 1px solid var(--antique-white);
+  border-radius: 40% 60% 55% 45% / 30% 42% 58% 70%;
   position: absolute;
   display: block;
 }
@@ -501,10 +532,12 @@ h2 {
 .service-image-absolute.position-1 {
   top: -17px;
   right: 39px;
-  transform: rotate(-25deg);
 }
 
 .service-image-absolute.position-2 {
+  width: 207.29px;
+  height: 220px;
+  min-height: 220px;
   top: -8px;
   left: 50%;
   transform: translateX(-50%) rotate(84deg);
@@ -516,7 +549,8 @@ h2 {
 
 .service-text {
   max-width: 335px;
-  line-height: 1.25;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
 
 .pricing-wrapp {
@@ -1182,6 +1216,11 @@ h2 {
     margin-top: 41px;
   }
 
+  #Standarts h2 {
+    font-size: 32px;
+    line-height: 1;
+  }
+
   .standart-image-wrapp {
     width: 120px;
     height: 120px;
@@ -1193,6 +1232,22 @@ h2 {
   .service-image-absolute.position-3 {
     height: 100px;
     min-height: 100px;
+    width: 94.22px;
+  }
+
+  .service-image-absolute.position-1 {
+    right: 0;
+  }
+
+  .service-image-absolute.position-2 {
+    top: 0;
+    left: 25%;
+  }
+
+  .service-image-absolute.position-3 {
+    top: 10%;
+    right: 15%;
+    left: auto;
   }
 
   .pricing-wrapp {
@@ -1373,9 +1428,46 @@ h2 {
     height: 92px;
   }
 
-  .standart-icon {
+  .standard-care-icon {
     width: 34px;
     height: 34px;
+  }
+
+  .standard-care-icon-main {
+    width: 34px;
+    height: 34px;
+  }
+
+  .standard-care-icon-comfort .standard-care-icon-main {
+    width: 38px;
+    height: 38px;
+  }
+
+  .standard-care-icon-sparkles {
+    width: 11px;
+    height: 11px;
+  }
+
+  .service-image-absolute.position-1 {
+    width: 123.39px;
+    height: 131px;
+    min-height: 131px;
+    right: 30%;
+  }
+
+  .service-image-absolute.position-2 {
+    width: 126.26px;
+    height: 134px;
+    min-height: 134px;
+    left: 45%;
+  }
+
+  .service-image-absolute.position-3 {
+    width: 126.26px;
+    height: 134px;
+    min-height: 134px;
+    top: 5%;
+    right: 38%;
   }
 
   .pricing-wrapp {
