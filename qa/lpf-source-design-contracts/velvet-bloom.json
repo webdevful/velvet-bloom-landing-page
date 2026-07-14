@@ -2,7 +2,7 @@
   "slug": "velvet-bloom",
   "sourceUrl": "https://magnolia-template.webflow.io/",
   "sourceLabel": "Magnolia (Webflow hosted template)",
-  "description": "Measured Magnolia-to-Velvet Bloom source-design contract. Section 2 checks pin the source 2x2 service grid, card split, transparent organic two-contour photo geometry, typography rhythm, and desktop-only grid/mobile-only slider topology.",
+  "description": "Measured Magnolia-to-Velvet Bloom source-design contract. Section 2 checks pin the source 2x2 service grid, card split, transparent organic two-contour photo geometry, typography rhythm, and desktop-only grid/mobile-only slider topology. Section 4 checks pin the source 547x814 pricing-media composite silhouette reconstructed from approved local photography.",
   "checks": [
     {
       "id": "services-desktop-grid",
@@ -91,6 +91,46 @@
       "property": "display",
       "expected": "none",
       "severity": "error"
+    },
+    {
+      "id": "pricing-composite-aspect",
+      "description": "The pricing media column keeps the source 547x814 transparent-composite silhouette.",
+      "selector": ".pricng-images-wrapp",
+      "property": "aspect-ratio",
+      "expected": "547 / 814",
+      "severity": "error"
+    },
+    {
+      "id": "pricing-primary-full-width",
+      "description": "The upper pricing photograph spans the full source media column instead of becoming a narrow right-aligned panel.",
+      "selector": ".pricing-main-image",
+      "property": "width",
+      "expected": "100%",
+      "severity": "error"
+    },
+    {
+      "id": "pricing-primary-height",
+      "description": "The upper photograph preserves the measured 83.8 percent height of the composite canvas.",
+      "selector": ".pricing-main-image",
+      "property": "height",
+      "expected": "83.8%",
+      "severity": "error"
+    },
+    {
+      "id": "pricing-secondary-right-anchor",
+      "description": "The smaller pricing photograph stays anchored to the bottom-right of the source composite.",
+      "selector": ".pricing-overlap-image",
+      "property": "right",
+      "expected": "0",
+      "severity": "error"
+    },
+    {
+      "id": "pricing-secondary-width",
+      "description": "The smaller pricing photograph preserves the measured 48.8 percent source-composite width.",
+      "selector": ".pricing-overlap-image",
+      "property": "width",
+      "expected": "48.8%",
+      "severity": "error"
     }
   ],
   "design_tokens": {
@@ -124,7 +164,7 @@
   "visual_slots": {
     "hero": { "family": "photography", "count": 1, "aspect": "670x589" },
     "services": { "family": "photography", "count": 4, "aspect": "405x455" },
-    "pricing": { "family": "photography", "count": 1, "aspect": "547x814" },
+    "pricing": { "family": "photography-composite", "count": 2, "aspect": "547x814 canvas; 100%x83.8% upper; 48.8%x29.5% bottom-right" },
     "gallery": { "family": "photography", "count": 5, "aspect": "mixed" },
     "form_decor": { "family": "photography", "count": 1, "aspect": "square" },
     "popup": { "family": "photography", "count": 1, "aspect": "square" },
