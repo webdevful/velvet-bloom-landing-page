@@ -1,6 +1,6 @@
 # Bucket Acceptance - Velvet Bloom 04 Types of Procedures & Pricing
 
-Status: pass — local production preview
+Status: pass — public release verified
 Date: 2026-07-13
 Workflow lane: LPF
 Production cell: Design & UX Repair
@@ -21,6 +21,10 @@ Defect class: section-implementation / responsive-breakpoint-gap
 - Local after mobile: `current-after-mobile.png`, 390×1000.
 - Mobile accordion state: `accordion-open-mobile.png`.
 - Measured geometry and interaction state: `browser-metrics.json`.
+- Public after: `current-after-public-desktop.png`, captured from immutable
+  deployment `https://f25785d2.velvet-bloom-landing-page.pages.dev/`.
+- Public responsive output: `rendered-public/`.
+- Public storefront parity: `funnel-public/`.
 
 The Desktop folder could not be copied through the shell because macOS denied
 terminal access to Desktop; the owner-supplied image paths remain the original
@@ -98,8 +102,13 @@ Accordion runtime:
   transparency. Section 4 acceptance is enforced by the product's measured
   `velvet-bloom.json` source-design contract plus the attached section-level
   browser evidence; this ticket does not widen into unrelated page rebuilds.
-- Public release, strict LPF gates, storefront funnel sync, and clean-repo proof:
-  pending Release Engineering.
+- Product PR #12 merged as `6dde37ca`.
+- Cloudflare deployment: `https://f25785d2.velvet-bloom-landing-page.pages.dev/`.
+- Stable URL rendered-output: pass at desktop/tablet/mobile; Swiper 4/4 at
+  tablet/mobile.
+- Storefront click path: pass from `/landing-pages/` to Beauty & Spas, Velvet
+  Bloom detail, and the stable live demo.
+- Funnel sync: pass; MAE `0.02`, RMS `0.79`.
 
 ## Codify-Back
 
